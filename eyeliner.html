@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+  <title>Eyeliner Tattoo Auckland | Lash Enhancement, Classic Eyeliner — Allure Microblading</title>
+  <meta name="description" content="Eyeliner tattoo services at Allure Microblading Auckland. Lash enhancement, classic upper eyeliner, lower eyeliner, and small flick. Natural-looking results. View pricing and book today.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --charcoal: #2C2825;
+      --charcoal-light: #363230;
+      --charcoal-mid: #46403a;
+      --gold: #C4A882;
+      --gold-light: #d4bc9a;
+      --gold-dim: rgba(196, 168, 130, 0.15);
+      --gold-border: rgba(196, 168, 130, 0.12);
+      --cream: #F5F0EB;
+      --cream-body: #B8B0A8;
+      --cream-muted: #8A837C;
+      --bg: #2C2825;
+      --card-bg: #3a3634;
+      --card-img-bg: #46403a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; font-weight: 400; background: var(--bg); color: var(--cream-body); line-height: 1.7; font-size: 15px; -webkit-font-smoothing: antialiased; }
+
+    .hero { position: relative; text-align: center; padding: 90px 24px 70px; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(154,125,90,0.06) 0%, transparent 70%); pointer-events: none; }
+    .hero-label { font-weight: 500; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(34px, 5.5vw, 52px); color: var(--cream); letter-spacing: 0.01em; line-height: 1.2; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 15px; color: var(--cream-muted); max-width: 540px; margin: 0 auto 30px; line-height: 1.7; }
+    .hero-divider { width: 50px; height: 1px; background: var(--gold); margin: 0 auto; }
+
+    .services { max-width: 900px; margin: 0 auto; padding: 40px 24px 20px; }
+    .service-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 60px; border: 1px solid var(--gold-border); border-radius: 4px; overflow: hidden; background: var(--card-bg); opacity: 0; transform: translateY(24px); animation: fadeUp 0.6s ease forwards; }
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.15s; }
+    .service-card:nth-child(3) { animation-delay: 0.2s; }
+    .service-card:nth-child(4) { animation-delay: 0.25s; }
+    .service-card:nth-child(even) .service-img { order: 2; }
+    .service-card:nth-child(even) .service-info { order: 1; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .service-img { position: relative; min-height: 360px; background: var(--card-img-bg); overflow: hidden; }
+    .service-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .img-placeholder { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: var(--cream-muted); font-size: 13px; letter-spacing: 0.05em; }
+    .img-placeholder span { display: block; font-size: 28px; margin-bottom: 8px; opacity: 0.3; }
+
+    .service-info { padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+    .service-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .service-name { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 26px; color: var(--cream); margin-bottom: 14px; line-height: 1.25; }
+    .service-desc { font-size: 14.5px; color: var(--cream-body); line-height: 1.8; margin-bottom: 22px; }
+    .service-price { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); margin-bottom: 4px; letter-spacing: 0.01em; }
+    .service-price small { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; color: var(--cream-muted); letter-spacing: 0.02em; }
+
+    .touchup-badge { display: flex; align-items: flex-start; gap: 10px; margin: 12px 0 16px; padding: 12px 16px; background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 3px; }
+    .touchup-icon { flex-shrink: 0; width: 20px; height: 20px; border: 1.5px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--gold); font-weight: 600; margin-top: 1px; }
+    .touchup-text { font-size: 12.5px; line-height: 1.5; color: var(--cream-body); }
+    .touchup-text strong { color: var(--cream); font-weight: 500; }
+    .touchup-text .touchup-price { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 14px; }
+
+    .service-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-book { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: var(--gold); padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: all 0.3s ease; }
+    .btn-book:hover { background: var(--gold-light); }
+    .btn-gallery { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); background: transparent; border: 1px solid var(--gold-border); padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: all 0.3s ease; }
+    .btn-gallery:hover { border-color: var(--gold); color: var(--cream); }
+
+    .pricing-section { max-width: 900px; margin: 0 auto; padding: 20px 24px 60px; }
+    .pricing-header { text-align: center; margin-bottom: 36px; }
+    .pricing-header h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px; color: var(--cream); margin-bottom: 8px; }
+    .pricing-header p { font-size: 14px; color: var(--cream-muted); }
+    .pricing-table { width: 100%; border-collapse: collapse; }
+    .pricing-table tr { border-bottom: 1px solid var(--gold-border); }
+    .pricing-table tr:last-child { border-bottom: none; }
+    .pricing-table td { padding: 16px 0; vertical-align: top; }
+    .pricing-table .pt-service { color: var(--cream); font-weight: 500; font-size: 14.5px; padding-right: 16px; }
+    .pricing-table .pt-detail { color: var(--cream-muted); font-size: 13px; padding-right: 16px; }
+    .pricing-table .pt-price { text-align: right; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 18px; white-space: nowrap; }
+    .pricing-note { margin-top: 28px; padding: 20px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 2px; }
+    .pricing-note p { font-size: 13.5px; color: var(--cream-body); line-height: 1.7; }
+    .pricing-note strong { color: var(--cream); font-weight: 500; }
+
+    .cta-section { text-align: center; padding: 50px 24px 80px; border-top: 1px solid var(--gold-border); max-width: 900px; margin: 0 auto; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 26px; color: var(--cream); margin-bottom: 10px; }
+    .cta-section p { color: var(--cream-muted); font-size: 14px; margin-bottom: 28px; }
+
+    @media (max-width: 960px) {
+      .service-card { grid-template-columns: 1fr; 
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+      .service-card:nth-child(even) .service-img { order: 0; }
+      .service-card:nth-child(even) .service-info { order: 0; }
+      .service-img { min-height: 260px; }
+      .service-info { padding: 28px 24px; }
+      .service-name { font-size: 22px; }
+      .service-price { font-size: 24px; }
+      .hero { padding: 70px 20px 50px; }
+    }
+  
+  
+
+  .hero { padding-top: 100px !important; }
+
+  .nav-voucher { color: var(--gold, #D4A96A) !important; }
+
+  
+  /* Mobile menu — hidden by default, shown only when .open is toggled by JS */
+  .mobile-menu .mob-sub {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.mobile-menu .mob-sub.open { max-height: 600px; min-height: 155px; }
+.mobile-menu .mob-sub a {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem; font-weight: 400;
+  color: #B8B0A8;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV (shared) -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" alt="Allure Microblading" width="36" height="36">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+
+    <div class="dropdown">
+      <div class="nav-link dropdown-toggle">Services
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </div>
+      <div class="dropdown-menu">
+        <a href="eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+        <a href="eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+        <a href="lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+        <a href="face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <!-- NOTE: pmu-removal.html was referenced in the original index.html but not provided as a file. -->
+        <a href="pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+      </div>
+    </div>
+
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+
+  <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+    <a href="eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+    <a href="eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+    <a href="lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+    <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+  </div>
+
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="faq.html" onclick="closeMenu()">FAQ</a>
+  <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+</div>
+
+
+
+  <!-- NAV -->
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+
+<section class="hero">
+  <span class="hero-label">Eyeliner Services</span>
+  <h1>Eyeliner <em>Tattoo</em></h1>
+  <p class="hero-sub">Wake up with perfectly defined eyes every day. We offer natural-looking eyeliner tattoo styles from subtle lash enhancement to a classic line with a delicate flick.</p>
+  <div class="hero-divider"></div>
+</section>
+
+<section class="services">
+
+  <!-- 1. LASH ENHANCEMENT -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_e2a55991f1404e618c5364ec84fe268b~mv2.jpg" data-img="lash_enhancement" alt="Lash Enhancement before and after">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Subtle &amp; Natural</span>
+      <h2 class="service-name">Lash Enhancement</h2>
+      <p class="service-desc">A slim, subtle line placed right along the upper lash line to create the illusion of thicker, fuller lashes. Lash enhancement adds quiet definition to the eyes without any visible liner. Perfect for everyday wear and a no-makeup makeup look.</p>
+      <div class="service-price">$450 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-lash" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-lash" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CLASSIC UPPER EYELINER -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_46a5307970d947ab9e49a353f3fbab2e~mv2.jpg" data-img="upper_eyeliner_tattoo" alt="Upper Eyeliner Tattoo before and after">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Polished Definition</span>
+      <h2 class="service-name">Classic Upper Eyeliner</h2>
+      <p class="service-desc">A slightly bolder line along the upper lid for a polished, defined look. Classic upper eyeliner suits those who wear liner daily and want a consistent, natural or softly dramatic result that lasts without the daily effort of applying it yourself.</p>
+      <div class="service-price">$550 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-upper-liner" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-upper-liner" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. LOWER EYELINER -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_b29c54982c8346eaa11ff2d558d117e2~mv2.jpg" data-img="lower_eyeliner_tattoo" alt="Lower Eyeliner Tattoo before and after">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Lower Lash Definition</span>
+      <h2 class="service-name">Lower Eyeliner</h2>
+      <p class="service-desc">A fine, subtle line along the lower lash line that adds depth and balance to the eyes. Lower eyeliner complements upper eyeliner beautifully or works on its own for a soft, understated enhancement.</p>
+      <div class="service-price">$350 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-lower-liner" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-lower-liner" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="pricing-section">
+  <div class="pricing-header">
+    <h2>Eyeliner Pricing</h2>
+    <p>All prices are per session. Touch-up is recommended for best results.</p>
+  </div>
+  <table class="pricing-table">
+    <tr><td class="pt-service">Lash Enhancement</td><td class="pt-detail">Slim upper lash liner — first session</td><td class="pt-price">$450</td></tr>
+    <tr><td class="pt-service">Upper Eyeliner</td><td class="pt-detail">Classic upper eyeliner — first session</td><td class="pt-price">$550</td></tr>
+    <tr><td class="pt-service">Lower Eyeliner</td><td class="pt-detail">Lower lash line — first session</td><td class="pt-price">$350</td></tr>
+    <tr><td class="pt-service">Initial Touch-Up</td><td class="pt-detail">Second session, required within 4–6 weeks after first session (our clients only)</td><td class="pt-price">$240</td></tr>
+    <tr><td class="pt-service">Extra Touch-Up</td><td class="pt-detail">If required, within 2 months after the initial touch-up</td><td class="pt-price">$100</td></tr>
+    <tr><td class="pt-service">12-Month Refresh</td><td class="pt-detail">For returning clients within 12 months of last session</td><td class="pt-price">$390</td></tr>
+    <tr><td class="pt-service">24-Month Refresh</td><td class="pt-detail">For returning clients within 24 months of last session</td><td class="pt-price">$490</td></tr>
+  </table>
+  <div class="pricing-note">
+    <p><strong>Please note:</strong> Cosmetic tattooing is a two-step process. A touch-up session is highly recommended 4–6 weeks after your first appointment for the best healed result. Clients with existing eyeliner tattoo from another clinic will be charged an additional $100 for cover-up or correction work. A non-refundable $50 deposit is required at booking. We accept EFTPOS, Visa, Mastercard, in-store Afterpay, and cash.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready for Effortless Eyes?</h2>
+  <p>Book your appointment or view our eyeliner gallery for inspiration.</p>
+  <div class="service-links" style="justify-content:center;">
+    <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+    <a href="gallery.html#eyes" class="btn-gallery">View Gallery</a>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Eyeliner Cosmetic Tattoo",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Allure Microblading",
+    "address": { "@type": "PostalAddress", "streetAddress": "40 St Benedicts Street, Eden Terrace", "addressLocality": "Auckland", "postalCode": "1010", "addressCountry": "NZ" },
+    "url": "https://m.alluremicroblading.co.nz"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Eyeliner Tattoo Services",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Lash Enhancement", "description": "Slim upper lash liner for natural everyday definition", "price": "450", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "Classic Upper Eyeliner", "description": "Polished upper eyeliner for natural to softly dramatic look", "price": "550", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "Lower Eyeliner", "description": "Fine lower lash line for depth and balance", "price": "350", "priceCurrency": "NZD" }
+    ]
+  }
+}
+</script>
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
+  });
+
+    function toggleMobServices() {
+    var btn = document.getElementById('mobServicesToggle');
+    var sub = document.getElementById('mobSub');
+    btn.classList.toggle('open');
+    sub.classList.toggle('open');
+  }
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+</script>
+</body>
+</html>

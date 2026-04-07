@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+  <title>Privacy Policy | Allure Microblading</title>
+  <meta name="description" content="Privacy policy for Allure Microblading. Learn how we collect, use, store and protect your personal information.">
+  <link rel="canonical" href="https://m.alluremicroblading.co.nz/privacy-policy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/nav.css">
+  <style>
+    :root{--bg:#2C2825;--bg-light:#363230;--bg-card:#3a3634;--gold:#C4A882;--gold-light:#d4bc9a;--gold-dim:rgba(196,168,130,0.15);--text:#F5F0EB;--text-mid:#B8B0A8;--text-dim:#8A837C;--border:rgba(196,168,130,0.12);--border-strong:rgba(196,168,130,0.25);--font-display:'Playfair Display',Georgia,serif;--font-body:'Jost','Helvetica Neue',sans-serif;--ease:cubic-bezier(0.4,0,0.2,1);--max-w:1120px;--px:clamp(20px,5vw,80px)}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}.mobile-menu a{color:#F5F0EB}.mobile-menu .mob-sub a{color:#B8B0A8}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.vis{opacity:1;transform:none}
+
+    /* PAGE HERO */
+    .page-hero{
+      position:relative;padding-top:100px;text-align:center;
+      padding-bottom:60px;overflow:hidden;
+    }
+    .page-hero::before{
+      content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:linear-gradient(
+        135deg,
+        transparent           0%,
+        rgba(212,169,106,.0)  25%,
+        rgba(212,169,106,.10) 44%,
+        rgba(212,169,106,.16) 52%,
+        rgba(212,169,106,.10) 60%,
+        rgba(212,169,106,.0)  75%,
+        transparent           100%
+      );
+    }
+    .page-hero::after{
+      content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:radial-gradient(
+        ellipse 100% 100% at 50% 50%,
+        transparent      45%,
+        rgba(10,8,6,.55) 80%,
+        rgba(10,8,6,.78) 100%
+      );
+    }
+    .page-hero-inner{
+      position:relative;z-index:1;max-width:var(--max-w);margin:0 auto;padding:60px var(--px) 0;
+    }
+    .page-hero-label{
+      font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:16px;
+      opacity:0;animation:fadeUp .7s .2s var(--ease) forwards;
+    }
+    .page-hero-title{
+      font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);
+      font-weight:500;line-height:1.2;margin-bottom:16px;
+      opacity:0;animation:fadeUp .7s .4s var(--ease) forwards;
+    }
+    .page-hero-title em{font-style:italic;color:var(--gold)}
+    .page-hero-sub{
+      font-size:.95rem;font-weight:300;color:var(--text-mid);max-width:520px;
+      margin:0 auto;line-height:1.8;
+      opacity:0;animation:fadeUp .7s .6s var(--ease) forwards;
+    }
+
+    /* CONTENT SECTION */
+    .pp-section{
+      max-width:720px;margin:0 auto;padding:0 var(--px) 80px;
+    }
+
+    /* Content cards */
+    .pp-card{
+      background:var(--bg-card);border:1px solid var(--border);border-radius:16px;
+      padding:40px 36px;margin-bottom:24px;
+    }
+    .pp-card h3{
+      font-family:var(--font-display);font-size:1.15rem;font-weight:500;
+      margin-bottom:20px;color:var(--text);
+    }
+    .pp-card p{
+      font-size:.88rem;font-weight:300;color:var(--text-mid);line-height:1.8;
+      margin-bottom:14px;
+    }
+    .pp-card p:last-child{margin-bottom:0}
+
+    .pp-card a{
+      color:var(--gold);border-bottom:1px solid rgba(196,168,130,0.3);
+      transition:border-color .3s;
+    }
+    .pp-card a:hover{border-color:var(--gold)}
+
+    /* List inside cards */
+    .pp-list{
+      list-style:none;margin:0 0 14px;padding:0;
+    }
+    .pp-list li{
+      font-size:.86rem;font-weight:300;color:var(--text-mid);line-height:1.8;
+      padding:6px 0 6px 20px;position:relative;
+      border-bottom:1px solid var(--border);
+    }
+    .pp-list li:last-child{border-bottom:none}
+    .pp-list li::before{
+      content:'';position:absolute;left:0;top:14px;
+      width:6px;height:6px;border-radius:50%;
+      background:var(--gold);opacity:.5;
+    }
+
+    /* Last updated */
+    .pp-updated{
+      font-size:.75rem;color:var(--text-dim);letter-spacing:.04em;
+      text-align:center;margin-top:32px;padding-top:20px;
+      border-top:1px solid var(--border);
+    }
+
+    /* FOOTER */
+    .footer{border-top:1px solid var(--border);padding:56px var(--px) 28px}
+    .footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
+    .footer-brand{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--text);margin-bottom:12px}
+    .footer-brand b{color:var(--gold)}
+    .footer-desc{font-size:.82rem;color:var(--text-dim);line-height:1.8;max-width:280px}
+    .footer-heading{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mid);margin-bottom:16px}
+    .footer-links{list-style:none}
+    .footer-links li{margin-bottom:8px}
+    .footer-links a{font-size:.82rem;color:var(--text-dim);transition:color .3s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:20px;text-align:center;font-size:.7rem;color:var(--text-dim);letter-spacing:.04em;max-width:var(--max-w);margin:0 auto}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+    .nav-voucher { color: var(--gold, #D4A96A) !important; }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    @media(max-width:960px){
+      .footer-inner{grid-template-columns:1fr;text-align:center;gap:32px}
+      .footer-desc{margin:0 auto}
+      .footer{padding:32px var(--px) 20px}
+      .footer-inner{gap:20px}
+      .footer-links li{margin-bottom:4px}
+    }
+    @media(max-width:640px){
+      .pp-card{padding:28px 22px}
+      .page-hero-inner{padding:40px var(--px) 0}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">
+      <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" data-img="logo" alt="Allure Microblading"  width="36" height="36">
+    </a>
+    <div class="nav-links">
+      <a href="/" class="nav-link active">Home</a>
+      <div class="dropdown"><div class="nav-link dropdown-toggle">Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></div>
+        <div class="dropdown-menu">
+          <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+          <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+          <a href="/lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+          <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+          <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="nav-link">Pricing</a>
+      <a href="/gallery.html" class="nav-link">Gallery</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/faq.html" class="nav-link">FAQ</a>
+      <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" style="display:none;">
+    <a href="/" onclick="closeMenu()">Home</a>
+    <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+      <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+      <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+      <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+      <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+      <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+    </div>
+    <a href="/pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/about.html" onclick="closeMenu()">About</a>
+    <a href="/faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="/contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Legal</div>
+      <h1 class="page-hero-title">Privacy <em>Policy</em></h1>
+      <p class="page-hero-sub">Your privacy is important to us. This policy explains how we collect, use and protect your personal information.</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY CONTENT -->
+  <section class="pp-section">
+
+    <!-- INFORMATION WE COLLECT -->
+    <div class="pp-card reveal">
+      <h3>Information We Collect</h3>
+      <p>We gather various information about customers and users of our website. This includes:</p>
+      <ul class="pp-list">
+        <li>Personal information provided through your voluntary use of the Website and the purchase process (such as your first and last name and email address)</li>
+        <li>Personal information provided to us through any other method, including correspondence and discussions</li>
+        <li>Information collected through click tracking in relation to your use of the Website, including content you upload and content you access</li>
+        <li>Aggregated data which tracks traffic to the Website</li>
+        <li>Cookies, which are pieces of information transferred to your computer for record keeping (such as your preferences on our Website)</li>
+      </ul>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="pp-card reveal">
+      <h3>Security</h3>
+      <p>We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.</p>
+    </div>
+
+    <!-- USE OF YOUR INFORMATION -->
+    <div class="pp-card reveal">
+      <h3>Use of Your Information</h3>
+      <p>We will never sell or rent your personal information to third parties.</p>
+      <p>We will use information we collect from you for the primary purpose for which it is collected and for such other secondary purposes that are related to the primary purpose of collection. We generally use personal information to complete delivery of our services to you, help us manage and enhance our services and to communicate with you.</p>
+    </div>
+
+    <!-- EMAIL & COMMUNICATIONS -->
+    <div class="pp-card reveal">
+      <h3>Email and Communications</h3>
+      <p>It is our policy to send emails throughout the purchasing process and other newsletter emails you elect to receive. In addition, we may send promotional material to you where we think it may be relevant to you.</p>
+      <p>It is our policy to immediately remove any person from any mailing list upon that person's request.</p>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="pp-card reveal">
+      <h3>Payment Details</h3>
+      <p>Payment for our services is processed via Stripe, which may ask you to provide further information including credit or debit card details. This information is retained by Stripe and will not be passed on to us.</p>
+      <p>We advise you to read the Terms and Conditions and Privacy Policy on the Stripe website for further information on what information will be required and how Stripe will use it.</p>
+    </div>
+
+    <!-- COOKIES -->
+    <div class="pp-card reveal">
+      <h3>Cookies</h3>
+      <p>Cookies are small pieces of information stored in a browser-related file on your computer when you use our website. Cookies are widely used on most major websites. Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. This helps us analyse data about web page traffic and improve our website to tailor it to customer needs.</p>
+      <p>A cookie in no way gives us access to your computer or any information about you other than the data you choose to share with us.</p>
+      <p>We may use information contained in cookies to make assumptions about the user of the computer and to provide users of that computer with focused content that we believe may be of interest, based on that information.</p>
+      <p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of our website.</p>
+    </div>
+
+    <!-- OTHER INFORMATION -->
+    <div class="pp-card reveal">
+      <h3>Other Information We Collect</h3>
+      <p>We collect and use additional information to carry out internal research on our users' demographics, interests and behaviour to better understand and serve you and our community. This information may include the URL you came from (whether on our site or not), which URL you go to next, what browser you are using, and your IP address.</p>
+      <p>If you post on our site, on social media platforms or other websites about us or your experience with us, we may collect that information for the purposes of improving our service and the end user experience.</p>
+    </div>
+
+    <!-- ACCESS & REMOVAL -->
+    <div class="pp-card reveal">
+      <h3>Access and Removal of Information</h3>
+      <p>You have the right to seek access to the personal information held about you and to advise us of any inaccuracy. There are some exceptions to this right set out in the Privacy Act 2020.</p>
+      <p>If you make an access request, we will ask you to verify your identity and specify what information you require. We may charge a fee to cover the costs of meeting your request.</p>
+      <p>To request access to, correction of, or deletion of your personal information, please contact us at alluremcbd@gmail.com</p>
+    </div>
+
+    <!-- LINKS TO OTHER WEBSITES -->
+    <div class="pp-card reveal">
+      <h3>Links to Other Websites</h3>
+      <p>Our website may contain links to enable you to visit other websites of interest easily. However, once you have used these links to leave our site, we do not have any control over that other website. We cannot be responsible for the protection and privacy of any information you provide whilst visiting such sites and they are not governed by this privacy statement.</p>
+      <p>You should exercise caution and look at the privacy statement applicable to the website in question.</p>
+    </div>
+
+    <!-- UPDATES -->
+    <div class="pp-card reveal">
+      <h3>Updates to This Policy</h3>
+      <p>We reserve the right to change this policy at any time. By continuing to use the Website, you agree to be bound by the amended policy. You should check from time to time to see if the policy has changed.</p>
+    </div>
+
+    <!-- LAST UPDATED -->
+    <div class="pp-updated reveal">Last updated: April 2026</div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Allure <b>Microblading</b></div>
+        <p class="footer-desc">Auckland's specialist cosmetic tattoo studio. Brows, eyes and lips — done properly, since 2016.</p>
+        <div style="margin-top:14px;display:flex;gap:16px"><a href="/terms-of-use.html" style="font-size:.75rem;color:#8A837C;transition:color .3s" onmouseover="this.style.color='#C4A882'" onmouseout="this.style.color='#8A837C'">Terms of Use</a><a href="/privacy-policy.html" style="font-size:.75rem;color:#8A837C;transition:color .3s" onmouseover="this.style.color='#C4A882'" onmouseout="this.style.color='#8A837C'">Privacy Policy</a></div>
+      </div>
+      <div><div class="footer-heading">Treatments</div><ul class="footer-links"><li><a href="/eyebrow.html">Eyebrow Treatments</a></li><li><a href="/eyeliner.html">Eyeliner &amp; Lash Enhancement</a></li><li><a href="/lip.html">Lip Blush Tattoos</a></li><li><a href="/face.html">Beauty Marks &amp; Freckles</a></li><li><a href="/pmu-removal.html">Non-Laser Removal</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/blog.html">Blog</a></li><li><a href="https://m.alluremicroblading.co.nz/gift-card" target="_blank" rel="noopener">Gift Vouchers</a></li></ul></div>
+      <div><div class="footer-heading">Contact</div><ul class="footer-links"><li><a href="tel:0212160465">021 216 0465</a></li><li>40 St Benedicts Street<br>Eden Terrace, Auckland</li></ul></div>
+    </div>
+    <div class="footer-bottom">&copy; 2016–2026 Allure Microblading. All rights reserved. Auckland, New Zealand.</div>
+  </footer>
+
+  <script>
+    const nav=document.getElementById('nav');
+    window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)});
+    const hamburger=document.getElementById('hamburger'),mm=document.getElementById('mobileMenu');
+    hamburger.addEventListener('click',()=>{
+      const isOpen=mm.classList.toggle('open');
+      hamburger.classList.toggle('active',isOpen);
+      mm.style.display=isOpen?'flex':'none';
+      document.body.style.overflow=isOpen?'hidden':'';
+    });
+    function toggleMobServices(){
+      var btn=document.getElementById('mobServicesToggle');
+      var sub=document.getElementById('mobSub');
+      btn.classList.toggle('open');
+      sub.classList.toggle('open');
+    }
+    function closeMenu(){
+      mm.classList.remove('open');
+      hamburger.classList.remove('active');
+      mm.style.display='none';
+      document.body.style.overflow='';
+    }
+    const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+
+</body>
+</html>

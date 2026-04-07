@@ -1,0 +1,14 @@
+{
+  "_instructions": "To add a new post: copy one of the post blocks below, paste it at the top of the 'posts' array, fill in the details, and create the matching HTML file in the /blog/ folder. The 'slug' must match the filename exactly (e.g. slug 'my-post' = /blog/my-post.html). Leave 'image' empty to show no image.",
+
+  "posts": [
+      {
+      "slug": "microblading-vs-nano-brows",
+      "title": "Microblading or Nano Brows: Which Suits You?",
+      "tag": "Brow Techniques",
+      "excerpt": "Two distinct techniques. One shared goal: brows that look effortlessly real. Understanding the difference helps you choose what is right for your skin, your lifestyle, and the result you are after.",
+      "image": "https://static.wixstatic.com/media/7a2894_3b94f37a963344688a7b0984533432dd~mv2.png",
+      "date": "April 2025"
+    }
+  ]
+}

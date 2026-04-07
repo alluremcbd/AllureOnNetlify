@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+  <title>FAQ | Allure Microblading Auckland – Cosmetic Tattoo Questions Answered</title>
+  <meta name="description" content="Frequently asked questions about cosmetic tattoo, microblading, nano brows, lip blush, eyeliner tattoo, and non-laser removal at Allure Microblading Auckland.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --charcoal: #2C2825;
+      --charcoal-light: #363230;
+      --charcoal-dark: #1E1B19;
+      --gold: #C4A882;
+      --gold-light: #d4bc9a;
+      --gold-dim: rgba(196, 168, 130, 0.15);
+      --text-primary: #F5F0EB;
+      --text-body: #B8B0A8;
+      --text-muted: #8A837C;
+      --bg: #2C2825;
+      --bg-alt: #363230;
+      --border: rgba(196, 168, 130, 0.12);
+      --border-hover: rgba(196, 168, 130, 0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      background-color: var(--bg);
+      color: var(--text-body);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero Section ── */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 50px;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 30px auto 0;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(32px, 5vw, 48px);
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Category Navigation ── */
+    .cat-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 30px 24px 10px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cat-nav button {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cat-nav button:hover,
+    .cat-nav button.active {
+      color: #FFFFFF;
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* ── FAQ Container ── */
+    .faq-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 30px 24px 80px;
+    }
+
+    /* ── Category Section ── */
+    .faq-category {
+      margin-bottom: 50px;
+    }
+    .faq-category-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--gold);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Accordion ── */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--text-primary);
+      padding: 18px 40px 18px 0;
+      cursor: pointer;
+      position: relative;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      transition: color 0.3s ease;
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-q::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--gold);
+      transition: transform 0.3s ease;
+    }
+    .faq-q.open::after {
+      content: '–';
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-a-inner {
+      padding: 0 0 20px;
+      color: var(--text-body);
+      font-size: 14.5px;
+      line-height: 1.8;
+    }
+    .faq-a-inner strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .faq-a-inner ul {
+      list-style: none;
+      padding: 8px 0 4px;
+    }
+    .faq-a-inner ul li {
+      padding: 3px 0 3px 16px;
+      position: relative;
+    }
+    .faq-a-inner ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .faq-a-inner a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.3s;
+    }
+    .faq-a-inner a:hover {
+      border-color: var(--gold);
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center;
+      padding: 50px 24px 80px;
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: var(--gold);
+      padding: 14px 36px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: var(--gold-light);
+    }
+
+    /* ── Schema ── */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 60px 20px 40px; }
+      .faq-wrap { padding: 20px 20px 60px; }
+      .faq-q { font-size: 14px; padding: 16px 36px 16px 0; }
+      .faq-a-inner { font-size: 13.5px; }
+      .cat-nav button { font-size: 12px; padding: 7px 14px; }
+    }
+  
+  
+
+  .hero { padding-top: 100px !important; }
+
+  .nav-voucher { color: var(--gold, #D4A96A) !important; }
+  /* Mobile menu — hidden by default, shown only when .open is toggled by JS */
+  .mobile-menu {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  .mobile-menu.open {
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV (shared) -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" alt="Allure Microblading" width="36" height="36">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+
+    <div class="dropdown">
+      <div class="nav-link dropdown-toggle">Services
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </div>
+      <div class="dropdown-menu">
+        <a href="eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+        <a href="eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+        <a href="lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+        <a href="face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <!-- NOTE: pmu-removal.html was referenced in the original index.html but not provided as a file. -->
+        <!-- <a href="pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a> -->
+      </div>
+    </div>
+
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+
+  <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+    <a href="eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+    <a href="eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+    <a href="lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+  </div>
+
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="faq.html" onclick="closeMenu()">FAQ</a>
+  <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+</div>
+
+
+
+  <!-- NAV -->
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know before your cosmetic tattoo appointment at Allure Microblading Auckland.</p>
+</section>
+
+<!-- Category Navigation -->
+<nav class="cat-nav" aria-label="FAQ categories">
+  <button class="active" data-cat="general">General</button>
+  <button data-cat="brows">Eyebrows</button>
+  <button data-cat="lips">Lip Blush</button>
+  <button data-cat="eyeliner">Eyeliner</button>
+  <button data-cat="freckles">Freckles &amp; Beauty Marks</button>
+</nav>
+
+<!-- FAQ Sections -->
+<div class="faq-wrap">
+
+  <!-- ════════════════════════════════════ GENERAL ════════════════════════════════════ -->
+  <section class="faq-category" data-section="general">
+    <h2 class="faq-category-title">General</h2>
+
+    <div class="faq-item">
+      <button class="faq-q">What is cosmetic tattooing?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Cosmetic tattooing — also known as semi-permanent makeup, PMU, or micropigmentation — is a technique that enhances the shape, symmetry, and fullness of features such as brows, eyes, and lips. Nano-particle pigment is deposited into the epidermis layer of the skin. Results typically last one to three years and fade gradually over time, so you can adjust shape and colour as trends or preferences change.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Which eyebrow technique is best for me?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        It depends on your skin type and the look you want. <strong>Nano Brows</strong> create hyper-realistic individual strokes. <strong>Ombré Powder Brows</strong> give a soft, filled-in makeup effect. <strong>Combination Brows</strong> blend strokes with shading for added depth. <strong>Classic Microblading</strong> delivers a clean, natural feathered finish. Visit our <a href="/blog.html">blog</a> for a detailed comparison to help you decide.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long do results last?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Typically one to three years, depending on your skin type, lifestyle, sun exposure, and aftercare routine.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does it hurt?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Most clients experience only mild discomfort. A topical numbing cream is applied before and throughout the procedure to keep you comfortable.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long is the appointment?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Allow two to three hours for your first session. This includes the consultation, face mapping, design approval, and the procedure itself.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can I choose my shape and colour?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Absolutely. Everything is customised to suit your face. We pre-draw and adjust the shape, symmetry, and colour with you before any pigment is applied. We only begin once you are completely happy with the design.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Who is not suitable for cosmetic tattooing?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        The following individuals should not undergo cosmetic tattooing:
+        <ul>
+          <li>Pregnant or breastfeeding women</li>
+          <li>Anyone with active skin infections, eczema, or psoriasis in the treatment area</li>
+          <li>Those currently on Accutane or blood-thinning medication</li>
+          <li>Clients undergoing chemotherapy or radiation therapy</li>
+          <li>Anyone with uncontrolled diabetes or autoimmune conditions affecting healing</li>
+          <li>Those with a history of keloid scarring in the treatment area</li>
+        </ul>
+        If you are unsure, please contact us before booking so we can advise.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">What should I expect at my first appointment?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        You will complete a health disclosure form on arrival. Feel free to wear your usual makeup to show us your preferred look — just avoid waterproof mascara and staining lip products. We then use cosmetics to map and simulate the intended result directly on your face. Once we both agree on the shape, colour, and placement, we apply a topical anaesthetic (allow 15–30 minutes to take effect) and begin the procedure. You may feel a light scratching sensation, and we reapply numbing throughout. The full session takes about two to three hours. You leave with aftercare instructions and healing ointment.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">What is the healing process like?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Surface healing takes around seven days. The colour will appear darker initially, then soften and settle over four to six weeks as the skin fully heals and the true shade emerges.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will my brows look too dark at first?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes, this is completely normal. Brows appear 30–50% darker immediately after the procedure. Over the following four to six weeks, the colour fades, softens, and resurfaces to its final tone.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do I need a touch-up?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. Cosmetic tattooing is a two-step process. A touch-up session at four to six weeks is recommended to perfect the shape, fill any areas where pigment has shed, and ensure longer-lasting results.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do I need a separate consultation?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        No. Your consultation is included and takes place on the day of your appointment. We discuss your goals, design and map the shape together, and only proceed once we are both satisfied.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How should I prepare for my appointment?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        <strong>For all procedures:</strong> Avoid alcohol, caffeine, ibuprofen, aspirin, and vitamin E supplements for at least 48–72 hours beforehand, as these increase bleeding and sensitivity. Eat a full meal before your appointment and stay well hydrated. Please reschedule if you have a cold, flu, or any active infection.<br><br>
+
+        <strong>For eyebrows:</strong> Complete any waxing or tweezing at least 72 hours prior. Avoid electrolysis for at least five days. Do not resume hair removal for two weeks after. Wash your hair before your appointment, as brows must stay dry during healing.<br><br>
+
+        <strong>For eyeliner:</strong> Remove eyelash extensions before your appointment. Do not wear contact lenses during the procedure — bring glasses and sunglasses instead. Avoid lash tinting or perming for two days prior. Do not use an eyelash curler on the day. If you have had eye surgery, consult your doctor about timing.<br><br>
+
+        <strong>For lips:</strong> If you are prone to cold sores, obtain a prescription for antiviral medication (such as Acyclovir) and take it as directed 48–72 hours before and after the procedure. If you plan on lip filler, complete the tattoo first and allow full healing before injection. Consult your doctor if you have had any lip surgery.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can you fix previous cosmetic tattoo work?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        In many cases, yes. It depends on the condition of the existing tattoo. Cover-ups typically use shading or combination techniques; microblading is only suitable when the old work is very faint. Old traditional tattoos that have turned blue, black, or green usually require laser removal first — we are unable to correct those directly. A $100 surcharge applies for cover-up and correction work. Visit our <a href="pricing.html">Pricing page</a> for details.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">I have existing eyebrow tattoo from another clinic. What do I need to do?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Please email us three clear, makeup-free photos before booking: one straight-on shot and one from each side showing the brow tails. Use natural daylight and no filters. Our artist will assess whether we can work with the existing tattoo and recommend the best technique for your situation.
+      </div></div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════ LIP BLUSH ════════════════════════════════════ -->
+  <section class="faq-category" data-section="lips" style="display:none;">
+    <h2 class="faq-category-title">Lip Blush Tattoo</h2>
+
+    <div class="faq-item">
+      <button class="faq-q">What is a lip blush tattoo?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        A lip blush tattoo is a cosmetic tattoo that enhances lip colour, shape, and definition. The result is a soft, natural-looking tint — like a subtle wash of colour without the appearance of wearing lipstick.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will it make my lips look bigger?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Lip blush enhances the border definition, which creates the appearance of fuller lips. However, it does not add physical volume — that requires filler.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long does lip blush last?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Approximately two to three years, with gradual fading over time.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does the procedure hurt?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        There is moderate discomfort. Topical numbing is applied before and reapplied throughout the procedure to manage sensitivity.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long is the healing period?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Initial healing takes five to ten days. The full colour settles and reveals its true shade over four to six weeks.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will my lips swell?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Mild swelling is normal and typically resolves within one to two days. The degree varies — some clients swell noticeably, while others experience very little.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can I wear lipstick after the procedure?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes, once your lips are fully healed — typically after four to six weeks.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can dark or uneven lip colour be corrected?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        In most cases, yes. Lip neutralisation is performed first to tone down darker pigmentation before your desired colour is applied. Please note that naturally very dark or near-black lip tones may require laser lightening prior to treatment, as tattooing alone cannot remove deep natural pigmentation — it can only soften and balance the tone. We recommend booking a consultation so we can assess your lip colour in person and set realistic expectations.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will the colour be very bright at first?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. The colour appears stronger and more intense immediately after the procedure. It softens significantly over the following six to eight weeks as the skin heals and the pigment settles to its final shade.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do I need a touch-up for lip blush?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes, at least one touch-up session is recommended for best results. Clients with very pale or very dark lip tones may require additional sessions for optimal colour payoff. Results vary per individual.
+      </div></div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════ EYELINER ════════════════════════════════════ -->
+  <section class="faq-category" data-section="eyeliner" style="display:none;">
+    <h2 class="faq-category-title">Eyeliner Tattoo</h2>
+
+    <div class="faq-item">
+      <button class="faq-q">What is an eyeliner tattoo?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Eyeliner tattoo is a cosmetic tattoo where pigment is placed along the lash line to define and enhance the eyes with a natural, long-lasting result.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">What eyeliner styles are available?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        We offer three natural styles: <strong>Lash Enhancement</strong> — a slim, subtle line right along the lash line for everyday definition. <strong>Classic Eyeliner</strong> — a slightly bolder line for a polished natural or softly dramatic look. <strong>Small Flick</strong> — a delicate wing tip for a touch of lift. We specialise in natural-looking eyeliner only and do not offer thick or heavily winged styles.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does it hurt?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Sensation varies between clients. Most describe it as a light vibration or mild discomfort. Numbing is applied to manage sensitivity.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long does eyeliner tattoo last?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Two to five years, depending on your skin type, oiliness, and lifestyle factors such as sun exposure.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will my eyes swell?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Some clients experience mild puffiness similar to tired eyes, typically lasting one to two days. Others have very little swelling.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is eyeliner tattoo safe for sensitive eyes?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Generally yes, but a consultation is recommended so we can discuss your specific sensitivity and any relevant history.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do I prepare for an eyeliner tattoo?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Remove any eyelash extensions at least three days before your appointment. Arrive without contact lenses, mascara, or eye makeup. Bring glasses and sunglasses to wear home, as your eyes may be light-sensitive afterward.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long is the healing period?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Approximately five to seven days for surface healing. The colour softens and settles over the following weeks.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will the eyeliner look too bold at first?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        The line appears darker immediately after the procedure and softens as the skin heals. The final result is more subtle and natural than what you see on day one.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do I need a touch-up?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. A touch-up session is recommended to perfect the shape and intensity of the line.
+      </div></div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════ FRECKLES ════════════════════════════════════ -->
+  <section class="faq-category" data-section="freckles" style="display:none;">
+    <h2 class="faq-category-title">Freckle &amp; Beauty Mark Tattoos</h2>
+
+    <div class="faq-item">
+      <button class="faq-q">What is a freckle or beauty mark tattoo?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Tiny deposits of pigment are placed to mimic natural freckles or beauty marks. Each dot is customised in colour, size, and placement for a natural sun-kissed look.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will they look natural?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. We customise the shade, size, and positioning to complement your natural skin tone and facial features for a subtle, realistic result.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long do freckle tattoos last?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Eight months to two years, depending on skin type and sun exposure. They fade gradually, similar to how natural sun freckles lighten over time.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do they fade over time?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. They soften and lighten gradually, which maintains their natural appearance as they age.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does it hurt?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Very minimal discomfort. Most clients describe it as a light tapping sensation.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How long is the appointment?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Usually one to two hours, depending on the number of freckles or marks and the area being covered.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do they heal?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Expect light scabbing followed by soft fading over seven to ten days. The colour settles to its final tone within a few weeks.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can I choose placement?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. Placement is fully customised. We work with you to map out the pattern across your nose, cheeks, or wherever you prefer.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can freckle tattoos be removed?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Yes. They fade naturally over time, or can be removed sooner with laser or non-laser tattoo removal if needed.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Who is suitable for this treatment?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Most skin types are suitable. A consultation is recommended to assess your skin tone and discuss the best approach for a natural result.
+      </div></div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════ BROWS (placeholder for nav) ════════════════════════════════════ -->
+  <section class="faq-category" data-section="brows" style="display:none;">
+    <h2 class="faq-category-title">Eyebrow Tattoo</h2>
+    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">Eyebrow-specific questions are covered across our General FAQ above — including technique comparison, healing, preparation, touch-ups, and cover-up work. Below are additional brow-specific details.</p>
+
+    <div class="faq-item">
+      <button class="faq-q">What eyebrow tattoo techniques do you offer?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        We offer <strong>Microblading Brows</strong> (classic hand-drawn feathered strokes), <strong>Nano Brows</strong> (machine hair strokes for hyper-realistic detail), <strong>Ombré Powder Brows</strong> (soft shaded makeup effect), <strong>Combination Brows</strong> (strokes blended with shading), and <strong>Men's Eyebrow Tattoos</strong> (natural, masculine shaping). Visit our individual service pages or <a href="/blog.html">blog</a> for a detailed comparison.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is classic microblading still a good option?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Absolutely. Classic microblading remains an excellent choice for achieving clean, natural feathery brows. It is a time-tested, handcrafted technique that delivers beautiful results — particularly on normal to dry skin. While nano brows offer a machine-based alternative, microblading holds its own as a refined and reliable method.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">What is the difference between nano brows and microblading?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Microblading uses a hand-held blade to create fine, feathered strokes. Nano brows use a digital machine with a single-point needle for even finer, more precise strokes that suit a wider range of skin types — including oily skin. Both create natural-looking brows; the best choice depends on your skin and goals. Read our <a href="/blog.html">detailed blog comparison</a> for more.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do I prepare specifically for eyebrow tattooing?</button>
+      <div class="faq-a"><div class="faq-a-inner">
+        Complete any waxing, threading, or tweezing at least 72 hours before your appointment. Avoid electrolysis for at least five days. Wash your hair before arriving, as your brows need to stay dry during the healing process. Do not resume hair removal for at least two weeks after the procedure.
+      </div></div>
+    </div>
+
+  </section>
+
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Still Have Questions?</h2>
+  <p>We are happy to help. Get in touch or book your appointment today.</p>
+  <a href="contact.html" class="cta-btn">Contact Us</a>
+</section>
+
+<!-- FAQ Schema (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is cosmetic tattooing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cosmetic tattooing — also known as semi-permanent makeup, PMU, or micropigmentation — is a technique that enhances the shape, symmetry, and fullness of features such as brows, eyes, and lips. Nano-particle pigment is deposited into the epidermis layer of the skin. Results typically last one to three years and fade gradually over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which eyebrow technique is best for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your skin type and the look you want. Nano Brows create hyper-realistic individual strokes. Ombré Powder Brows give a soft, filled-in makeup effect. Combination Brows blend strokes with shading. Classic Microblading delivers a clean, natural feathered finish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do cosmetic tattoo results last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically one to three years, depending on skin type, lifestyle, sun exposure, and aftercare routine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does cosmetic tattooing hurt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most clients experience only mild discomfort. A topical numbing cream is applied before and throughout the procedure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a lip blush tattoo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lip blush tattoo is a cosmetic tattoo that enhances lip colour, shape, and definition with a soft, natural-looking tint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an eyeliner tattoo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eyeliner tattoo is a cosmetic tattoo where pigment is placed along the lash line to define and enhance the eyes. Styles include lash enhancement, classic eyeliner, and small flick."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a freckle or beauty mark tattoo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tiny deposits of pigment are placed to mimic natural freckles or beauty marks. Each dot is customised in colour, size, and placement for a natural sun-kissed look. Results last eight months to two years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a touch-up after cosmetic tattooing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Cosmetic tattooing is a two-step process. A touch-up session at four to six weeks is recommended to perfect the result and ensure longer-lasting colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you fix previous cosmetic tattoo work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In many cases, yes. Cover-ups typically use shading or combination techniques. Old traditional tattoos that have turned blue, black, or green usually require laser removal first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I prepare for a cosmetic tattoo appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avoid alcohol, caffeine, ibuprofen, aspirin, and vitamin E supplements for 48-72 hours before. Eat a full meal and stay hydrated. Specific preparation applies for eyebrows, eyeliner, and lip procedures."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+  // Category navigation
+  const catBtns = document.querySelectorAll('.cat-nav button');
+  const sections = document.querySelectorAll('.faq-category');
+
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      sections.forEach(s => {
+        s.style.display = s.dataset.section === cat ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const isOpen = q.classList.contains('open');
+
+      // Close all in same section
+      q.closest('.faq-category').querySelectorAll('.faq-q').forEach(otherQ => {
+        otherQ.classList.remove('open');
+        otherQ.nextElementSibling.style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        q.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
+  });
+
+    function toggleMobServices() {
+    var btn = document.getElementById('mobServicesToggle');
+    var sub = document.getElementById('mobSub');
+    btn.classList.toggle('open');
+    sub.classList.toggle('open');
+  }
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+</script>
+</body>
+</html>

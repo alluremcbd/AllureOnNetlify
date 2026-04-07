@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- style="background:#2C2825;"> -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+<title>About | Allure Microblading Auckland – Certified PMU Specialist Since 2016</title>
+<meta name="description" content="Meet the artist behind Allure Microblading — a certified cosmetic tattoo artist and PMU specialist based in Eden Terrace, Auckland, serving New Zealand clients since 2016.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/nav.css">
+<style>
+
+:root{
+  --cream: #2C2825 !important;
+  --cream-mid: #363230 !important;
+  --text: #F5F0EB !important;
+  --text-light: #B8B0A8 !important;
+  --gold: #C4A882 !important;
+  --gold-light: #d4bc9a !important;
+  --gold-pale: rgba(196,168,130,0.18) !important;
+}
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ body {
+    font-family: 'Jost', sans-serif;
+    background: #2C2825 !important;
+    color: #B8B0A8 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HERO — editorial large type */
+  .hero {
+    background: var(--bg) !important;
+    padding: 96px 80px 80px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--gold-border);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(196,168,130,.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-label { font-size: .68rem; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--gold) !important; margin-bottom: 32px; display: block; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 400; color: var(--white) !important; line-height: 1.05; max-width: 700px; position: relative; z-index: 1; }
+  .hero h1 em { font-style: italic; color: var(--gold-light) !important; }
+
+  /* STORY SECTION — two column */
+  .story { background: var(--bg) !important; display: grid; grid-template-columns: 1fr 2fr; gap: 0; border-bottom: 1px solid var(--gold-border); }
+  .story-left { padding: 72px 48px 72px 80px; border-right: 1px solid var(--gold-border); background: var(--bg) !important; }
+  .story-left .since { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 400; font-style: italic; color: var(--gold-border) !important; line-height: 1; display: block; margin-bottom: 24px; }
+  .story-left .tag { font-size: .65rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold) !important; display: block; margin-bottom: 12px; }
+  .story-left p { font-size: .85rem; font-weight: 300; color: var(--text-mid) !important; line-height: 1.9; }
+
+  .story-right { padding: 72px 80px 72px 64px; background: var(--bg) !important; }
+  .story-right .section-label { font-size: .65rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold) !important; display: block; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--gold-border); }
+  .story-right h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--white) !important; line-height: 1.25; margin-bottom: 32px; }
+  .story-right h2 em { font-style: italic; color: var(--gold-light) !important; }
+  .story-right p { font-size: .93rem; font-weight: 300; color: var(--text) !important; line-height: 2; margin-bottom: 20px; }
+
+  /* REVIEW STRIP */
+  .review-strip {
+    background: var(--bg-mid) !important;
+    border-top: 1px solid var(--gold-border);
+    border-bottom: 1px solid var(--gold-border);
+    padding: 48px 80px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .review-left { display: flex; align-items: center; gap: 24px; }
+  .review-stars { font-size: 1.1rem; letter-spacing: 4px; color: var(--gold) !important; }
+  .review-text h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400; color: var(--white) !important; margin-bottom: 4px; }
+  .review-text p { font-size: .8rem; font-weight: 300; color: var(--text-mid) !important; line-height: 1.6; }
+  .review-text p em { font-style: italic; color: var(--text-dim) !important; font-size: .75rem; }
+  .btn-review { display: inline-block; background: transparent !important; color: var(--gold) !important; font-family: 'Jost', sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 14px 28px; border: 1px solid var(--gold-border); transition: all .25s; white-space: nowrap; }
+  .btn-review:hover { border-color: var(--gold); background: var(--gold-pale) !important; }
+
+  /* PHILOSOPHY */
+  .philosophy { background: var(--bg) !important; padding: 96px 80px; text-align: center; position: relative; overflow: hidden; }
+  .philosophy::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(196,168,130,.05) 0%, transparent 65%); pointer-events: none; }
+  .philosophy .label { font-size: .65rem; font-weight: 600; letter-spacing: .25em; text-transform: uppercase; color: var(--gold) !important; display: block; margin-bottom: 28px; position: relative; }
+  .philosophy blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; font-style: italic; color: var(--white) !important; line-height: 1.4; max-width: 760px; margin: 0 auto 32px; position: relative; }
+  .philosophy p { font-size: .92rem; font-weight: 300; color: var(--text-mid) !important; line-height: 1.95; max-width: 620px; margin: 0 auto; position: relative; }
+
+  /* CTA */
+  .cta { background: var(--gold) !important; padding: 64px 80px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; font-style: italic; color: #2C2825 !important; }
+  .btn-dark { display: inline-block; background: #2C2825 !important; color: var(--gold) !important; font-family: 'Jost', sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 16px 36px; transition: background .25s; white-space: nowrap; }
+  .btn-dark:hover { background: #1e1b18 !important; }
+
+  @media(max-width:960px){
+    nav { padding: 0 20px; } .nav-links { display: none; }
+    .hero { padding: 64px 24px 56px; }
+    .story { grid-template-columns: 1fr; }
+    .story-left { padding: 48px 24px; border-right: none; border-bottom: 1px solid var(--gold-border); }
+    .story-left .since { font-size: 3.5rem; }
+    .story-right { padding: 48px 24px; }
+    .review-strip { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
+    .philosophy { padding: 72px 24px; }
+    .cta { padding: 48px 24px; flex-direction: column; align-items: flex-start; }
+  }
+
+  .nav-voucher { color: var(--gold, #D4A96A) !important; }
+
+  /* Mobile menu — hidden by default, shown only when .open is toggled by JS */
+  .mobile-menu .mob-sub {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.mobile-menu .mob-sub.open { max-height: 600px; min-height: 155px; }
+.mobile-menu .mob-sub a {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem; font-weight: 400;
+  color: #B8B0A8;
+}
+</style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">
+      <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" alt="Allure Microblading" width="36" height="36">
+    </a>
+    <div class="nav-links">
+      <a href="/" class="nav-link active">Home</a>
+      <div class="dropdown"><div class="nav-link dropdown-toggle">Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></div>
+        <div class="dropdown-menu">
+          <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+          <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+          <a href="/lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+          <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+          <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="nav-link">Pricing</a>
+      <a href="/gallery.html" class="nav-link">Gallery</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/faq.html" class="nav-link">FAQ</a>
+      <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/" onclick="closeMenu()">Home</a>
+    <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+      <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+      <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+      <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+      <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+      <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+    </div>
+    <a href="/pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/about.html" onclick="closeMenu()">About</a>
+    <a href="/faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="/contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-label">Est. 2016 · Eden Terrace, Auckland</span>
+  <h1>The Artist<br>Behind <em>the Work</em></h1>
+</section>
+
+<!-- STORY -->
+<div class="story">
+  <div class="story-left">
+    <span class="since">2016</span>
+    <span class="tag">Serving Auckland</span>
+    <p>Nearly a decade of cosmetic tattoo work, thousands of clients, and a reputation built entirely on results and trust.</p>
+  </div>
+  <div class="story-right">
+    <span class="section-label">About Allure Microblading</span>
+    <h2>Where Artistry Meets <em>Expertise</em></h2>
+    <p>Allure Microblading was founded in 2016 with a singular purpose: to offer Auckland clients cosmetic tattoo results that are refined, natural-looking, and built to last. Since opening, the studio has earned the trust of the New Zealand community through consistent results, a commitment to hygiene, and an honest, client-first consultation process.</p>
+    <p>Jessica is a certified cosmetic tattoo artist and PMU specialist, holding certification from California, USA, and a cosmetic tattoo licence in New Zealand, with international training spanning the Americas, Europe, and Asia. She has studied advanced micropigmentation and colour theory under leading PMU educators and industry masters, completed masterclasses in precision hair-stroke work and pigment science, and trained in feathering techniques across both classic manual and machine methods. Continuous professional development is central to her practice and she attends industry seminars and advanced masterclasses every year to remain at the cutting edge of technique, pigment science, and skin theory. Jessica works exclusively with state-of-the-art devices and the finest products available on the market, and holds herself to the highest hygiene standards for every client. Her dedication to quality and care has earned the trust of New Zealand clients for nearly a decade, reflected in her consistently five-star reviews.</p>
+  </div>
+</div>
+
+<!-- REVIEW STRIP -->
+<div class="review-strip">
+  <div class="review-left">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">
+      <h3>Five-Star Rated on Google</h3>
+      <p>Trusted by Auckland clients since 2016. Read what they have to say.<br><em>Verified organic reviews</em></p>
+    </div>
+  </div>
+  <a href="https://search.google.com/local/reviews?placeid=ChIJF6eI_8JHDW0RxKVrMubQHQM" target="_blank" rel="noopener" class="btn-review">Read Our Reviews</a>
+</div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <span class="label">Our Philosophy</span>
+  <blockquote>Good cosmetic tattoo work should be invisible. Noticed only when it is absent.</blockquote>
+  <p>Every service at Allure Microblading begins with a thorough consultation, because the best results start long before the first stroke. Facial structure, skin tone, undertone, lifestyle, and personal preference are all considered before any colour or technique is decided upon. The goal is always the same: results that enhance your natural features and feel entirely your own.</p>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Ready to Begin Your Journey?</h2>
+  <a href="/booking-agreement.html" class="btn-dark">Book Online</a>
+</div>
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
+  });
+
+    function toggleMobServices() {
+    var btn = document.getElementById('mobServicesToggle');
+    var sub = document.getElementById('mobSub');
+    btn.classList.toggle('open');
+    sub.classList.toggle('open');
+  }
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+</script>
+</body>
+</html>

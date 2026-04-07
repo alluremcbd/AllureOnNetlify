@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+  <title>Beauty Marks &amp; Freckle Tattoos Auckland | Cosmetic Freckles — Allure Microblading</title>
+  <meta name="description" content="Beauty marks and freckle tattoos at Allure Microblading Auckland. Natural-looking cosmetic freckles and beauty spots customised to your face. View pricing and book today.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --charcoal: #2C2825;
+      --charcoal-light: #363230;
+      --charcoal-mid: #46403a;
+      --gold: #C4A882;
+      --gold-light: #d4bc9a;
+      --gold-dim: rgba(196, 168, 130, 0.15);
+      --gold-border: rgba(196, 168, 130, 0.12);
+      --cream: #F5F0EB;
+      --cream-body: #B8B0A8;
+      --cream-muted: #8A837C;
+      --bg: #2C2825;
+      --card-bg: #3a3634;
+      --card-img-bg: #46403a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; font-weight: 400; background: var(--bg); color: var(--cream-body); line-height: 1.7; font-size: 15px; -webkit-font-smoothing: antialiased; }
+
+    .hero { position: relative; text-align: center; padding: 90px 24px 70px; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(154,125,90,0.06) 0%, transparent 70%); pointer-events: none; }
+    .hero-label { font-weight: 500; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(34px, 5.5vw, 52px); color: var(--cream); letter-spacing: 0.01em; line-height: 1.2; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 15px; color: var(--cream-muted); max-width: 540px; margin: 0 auto 30px; line-height: 1.7; }
+    .hero-divider { width: 50px; height: 1px; background: var(--gold); margin: 0 auto; }
+
+    .services { max-width: 900px; margin: 0 auto; padding: 40px 24px 20px; }
+    .service-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 60px; border: 1px solid var(--gold-border); border-radius: 4px; overflow: hidden; background: var(--card-bg); opacity: 0; transform: translateY(24px); animation: fadeUp 0.6s ease forwards; }
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.15s; }
+    .service-card:nth-child(3) { animation-delay: 0.2s; }
+    .service-card:nth-child(even) .service-img { order: 2; }
+    .service-card:nth-child(even) .service-info { order: 1; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .service-img { position: relative; min-height: 360px; background: var(--card-img-bg); overflow: hidden; }
+    .service-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .img-placeholder { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: var(--cream-muted); font-size: 13px; letter-spacing: 0.05em; }
+    .img-placeholder span { display: block; font-size: 28px; margin-bottom: 8px; opacity: 0.3; }
+    .img-placeholder small { display: block; font-size: 11px; margin-top: 4px; opacity: 0.6; }
+
+    .service-info { padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+    .service-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .service-name { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 26px; color: var(--cream); margin-bottom: 14px; line-height: 1.25; }
+    .service-desc { font-size: 14.5px; color: var(--cream-body); line-height: 1.8; margin-bottom: 22px; }
+    .service-price { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); margin-bottom: 16px; letter-spacing: 0.01em; }
+    .service-price small { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; color: var(--cream-muted); letter-spacing: 0.02em; }
+
+    .service-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-book { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: var(--gold); padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: all 0.3s ease; }
+    .btn-book:hover { background: var(--gold-light); }
+    .btn-gallery { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); background: transparent; border: 1px solid var(--gold-border); padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: all 0.3s ease; }
+    .btn-gallery:hover { border-color: var(--gold); color: var(--cream); }
+
+    .pricing-section { max-width: 900px; margin: 0 auto; padding: 20px 24px 60px; }
+    .pricing-header { text-align: center; margin-bottom: 36px; }
+    .pricing-header h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px; color: var(--cream); margin-bottom: 8px; }
+    .pricing-header p { font-size: 14px; color: var(--cream-muted); }
+    .pricing-table { width: 100%; border-collapse: collapse; }
+    .pricing-table tr { border-bottom: 1px solid var(--gold-border); }
+    .pricing-table tr:last-child { border-bottom: none; }
+    .pricing-table td { padding: 16px 0; vertical-align: top; }
+    .pricing-table .pt-service { color: var(--cream); font-weight: 500; font-size: 14.5px; padding-right: 16px; }
+    .pricing-table .pt-detail { color: var(--cream-muted); font-size: 13px; padding-right: 16px; }
+    .pricing-table .pt-price { text-align: right; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 18px; white-space: nowrap; }
+    .pricing-note { margin-top: 28px; padding: 20px 24px; background: var(--card-bg); border-left: 3px solid var(--gold); border-radius: 2px; }
+    .pricing-note p { font-size: 13.5px; color: var(--cream-body); line-height: 1.7; }
+    .pricing-note strong { color: var(--cream); font-weight: 500; }
+
+    .cta-section { text-align: center; padding: 50px 24px 80px; border-top: 1px solid var(--gold-border); max-width: 900px; margin: 0 auto; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 26px; color: var(--cream); margin-bottom: 10px; }
+    .cta-section p { color: var(--cream-muted); font-size: 14px; margin-bottom: 28px; }
+
+    @media (max-width: 960px) {
+      .service-card { grid-template-columns: 1fr; 
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+      .service-card:nth-child(even) .service-img { order: 0; }
+      .service-card:nth-child(even) .service-info { order: 0; }
+      .service-img { min-height: 260px; }
+      .service-info { padding: 28px 24px; }
+      .service-name { font-size: 22px; }
+      .service-price { font-size: 24px; }
+      .hero { padding: 70px 20px 50px; }
+    }
+  
+  
+
+  .hero { padding-top: 100px !important; }
+
+  .nav-voucher { color: var(--gold, #D4A96A) !important; }
+
+  
+  /* Mobile menu — hidden by default, shown only when .open is toggled by JS */
+  .mobile-menu {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  .mobile-menu.open {
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV (shared) -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" data-img="logo" alt="Allure Microblading"  width="36" height="36">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+
+    <div class="dropdown">
+      <div class="nav-link dropdown-toggle">Services
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </div>
+      <div class="dropdown-menu">
+        <a href="eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+        <a href="eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+        <a href="lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+        <a href="face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <a href="pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+      </div>
+    </div>
+
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+
+  <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+    <a href="eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+    <a href="eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+    <a href="lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+    <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+  </div>
+
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="faq.html" onclick="closeMenu()">FAQ</a>
+  <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+</div>
+
+
+
+  <!-- NAV -->
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+
+<section class="hero">
+  <span class="hero-label">Face Services</span>
+  <h1>Beauty Marks &amp; <em>Freckle</em> Tattoos</h1>
+  <p class="hero-sub">Add a touch of character with natural-looking cosmetic freckles or a perfectly placed beauty mark customised to complement your features.</p>
+  <div class="hero-divider"></div>
+</section>
+
+<section class="services">
+
+  <!-- 1. FRECKLES — LIGHT COVERAGE -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_4a4d447caeff4464bfd8f7475e907d98~mv2.png" data-img="freckle_nose_only" alt="Freckle Tattoo Light Coverage Nose Only — Allure Microblading Auckland">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Light Coverage</span>
+      <h2 class="service-name">Freckle Tattoos — Nose</h2>
+      <p class="service-desc">A light dusting of freckles across the nose for a subtle, sun-kissed look. Each freckle is individually placed and customised in colour, size, and spacing to match your skin tone. Perfect if you want a natural hint of freckles without full coverage. Allow approximately one hour for this session.</p>
+      <div class="service-price">$250 <small>per session</small></div>
+      <div class="service-links">
+        <a href="mailto:alluremcbd@gmail.com ?subject=Booking%20Enquiry&body=Hi%2C%0A%0AI%E2%80%99m%20interested%20in%20booking%20a%20freckle%20treatment.%0A%0AThank%20you%2C" class="btn-book">Enquire to Book</a>
+        <a href="gallery.html#gallery-freckles" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-freckles" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. FRECKLES — MEDIUM COVERAGE -->
+  <div class="service-card">
+    <div class="service-img">
+      <div class="img-placeholder"><span>✦</span>Insert photo: Nose + Cheeks<br><small>Medium coverage — fuller dusting</small></div>
+      <img src="https://static.wixstatic.com/media/7a2894_40d80bea9b014a88ad13f8902a1c0084~mv2.jpg" data-img="freckle_nose_cheeks" alt="Freckle Tattoo Medium Coverage Nose and Cheeks — Allure Microblading Auckland">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Medium Coverage</span>
+      <h2 class="service-name">Freckle Tattoos — Nose &amp; Cheeks</h2>
+      <p class="service-desc">A fuller dusting of freckles across the nose and cheeks for a naturally sun-kissed appearance. Each freckle is customised in colour, size, and placement to complement your facial features and skin tone. Results typically last eight months to two years and fade gradually just like natural freckles. Allow approximately two hours for this session.</p>
+      <div class="service-price">$450 <small>per session</small></div>
+      <div class="service-links">
+        <a href="mailto:alluremcbd@gmail.com ?subject=Booking%20Enquiry&body=Hi%2C%0A%0AI%E2%80%99m%20interested%20in%20booking%20a%20freckle%20treatment.%0A%0AThank%20you%2C" class="btn-book">Enquire to Book</a>
+        <a href="gallery.html#gallery-freckles" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-freckles" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. BEAUTY MARKS -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_5d74e6b057bb4e6f811ca45b0ef00c1e~mv2.png" data-img="BeautyMark" alt="Beauty Marks — Allure Microblading Auckland">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Signature Detail</span>
+      <h2 class="service-name">Beauty Mark Tattoos</h2>
+      <p class="service-desc">A perfectly placed beauty mark that adds character and charm to your face. Whether above the lip, on the cheekbone, or wherever you envision it. Each beauty mark is customised in shade and size for a subtle, realistic result that looks entirely natural. Price includes two marks.</p>
+      <div class="service-price">$100 <small>for two marks</small></div>
+      <div class="service-links">
+        <a href="mailto:alluremcbd@gmail.com ?subject=Booking%20Enquiry&body=Hi%2C%0A%0AI%E2%80%99m%20interested%20in%20booking%20a%20beauty%20mark%20treatment.%0A%0AThank%20you%2C" class="btn-book">Enquire to Book</a>
+        <a href="gallery.html#gallery-beauty-marks" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-beauty-marks" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="pricing-section">
+  <div class="pricing-header">
+    <h2>Face Pricing</h2>
+    <p>All prices are per session. Freckle pricing depends on coverage area.</p>
+  </div>
+  <table class="pricing-table">
+    <tr><td class="pt-service">Freckles — Light Coverage</td><td class="pt-detail">Nose only — approx. 1 hour</td><td class="pt-price">$250</td></tr>
+    <tr><td class="pt-service">Freckles — Medium Coverage</td><td class="pt-detail">Nose and cheeks — approx. 2 hours</td><td class="pt-price">$450</td></tr>
+    <tr><td class="pt-service">Beauty Mark</td><td class="pt-detail">Two beauty marks — customised placement</td><td class="pt-price">$100</td></tr>
+  </table>
+  <div class="pricing-note">
+    <p><strong>Need more coverage?</strong> Additional areas beyond nose and cheeks may require a follow-up session. Please contact us to discuss your desired coverage and we will advise on pricing.</p>
+    <p style="margin-top:12px;"><strong>Please note:</strong> Freckle and beauty mark tattoos fade naturally over time. Results typically last eight months to two years depending on skin type and sun exposure. A non-refundable $50 deposit is required at booking. We accept EFTPOS, Visa, Mastercard, in-store Afterpay, and cash.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready for Your Signature Look?</h2>
+  <p>Book your appointment or view our gallery for inspiration.</p>
+  <div class="service-links" style="justify-content:center;">
+    <a href="mailto:alluremcbd@gmail.com ?subject=Booking%20Enquiry&body=Hi%2C%0A%0AI%E2%80%99m%20interested%20in%20booking%20a%20face%20treatment.%0A%0AThank%20you%2C" class="btn-book">Enquire to Book</a>
+    <a href="gallery.html#face" class="btn-gallery">View Gallery</a>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Beauty Marks and Freckle Tattoos",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Allure Microblading",
+    "address": { "@type": "PostalAddress", "streetAddress": "40 St Benedicts Street, Eden Terrace", "addressLocality": "Auckland", "postalCode": "1010", "addressCountry": "NZ" },
+    "url": "https://m.alluremicroblading.co.nz"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Face Tattoo Services",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Freckle Tattoos — Light Coverage (Nose)", "description": "Light dusting of cosmetic freckles across the nose", "price": "250", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "Freckle Tattoos — Medium Coverage (Nose & Cheeks)", "description": "Cosmetic freckles across nose and cheeks", "price": "450", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "Beauty Mark Tattoos", "description": "Two beauty marks customised to your face", "price": "100", "priceCurrency": "NZD" }
+    ]
+  }
+}
+</script>
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
+  });
+
+    function toggleMobServices() {
+    var btn = document.getElementById('mobServicesToggle');
+    var sub = document.getElementById('mobSub');
+    btn.classList.toggle('open');
+    sub.classList.toggle('open');
+  }
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+</script>
+
+<script>
+  // Image loader — controlled via /images.json
+  (function() {
+    fetch('/images.json')
+      .then(function(r){ return r.json(); })
+      .then(function(imgs) {
+        document.querySelectorAll('img[data-img]').forEach(function(el) {
+          var key = el.getAttribute('data-img');
+          if (imgs[key]) el.src = imgs[key];
+        });
+      })
+      .catch(function(e){ console.warn('images.json not loaded', e); });
+  })();
+</script>
+</body>
+</html>

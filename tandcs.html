@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+  <title>Terms and Conditions | Allure Microblading</title>
+  <meta name="description" content="Terms and conditions for cosmetic tattoo services at Allure Microblading, Auckland. Please read before booking your appointment.">
+  <link rel="canonical" href="https://m.alluremicroblading.co.nz/tandcs">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/nav.css">
+  <style>
+    :root{--bg:#2C2825;--bg-light:#363230;--bg-card:#3a3634;--gold:#C4A882;--gold-light:#d4bc9a;--gold-dim:rgba(196,168,130,0.15);--text:#F5F0EB;--text-mid:#B8B0A8;--text-dim:#8A837C;--border:rgba(196,168,130,0.12);--border-strong:rgba(196,168,130,0.25);--font-display:'Playfair Display',Georgia,serif;--font-body:'Jost','Helvetica Neue',sans-serif;--ease:cubic-bezier(0.4,0,0.2,1);--max-w:1120px;--px:clamp(20px,5vw,80px)}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}.mobile-menu a{color:#F5F0EB}.mobile-menu .mob-sub a{color:#B8B0A8}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.vis{opacity:1;transform:none}
+
+    /* PAGE HERO */
+    .page-hero{
+      position:relative;padding-top:100px;text-align:center;
+      padding-bottom:60px;overflow:hidden;
+    }
+    .page-hero::before{
+      content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:linear-gradient(
+        135deg,
+        transparent           0%,
+        rgba(212,169,106,.0)  25%,
+        rgba(212,169,106,.10) 44%,
+        rgba(212,169,106,.16) 52%,
+        rgba(212,169,106,.10) 60%,
+        rgba(212,169,106,.0)  75%,
+        transparent           100%
+      );
+    }
+    .page-hero::after{
+      content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:radial-gradient(
+        ellipse 100% 100% at 50% 50%,
+        transparent      45%,
+        rgba(10,8,6,.55) 80%,
+        rgba(10,8,6,.78) 100%
+      );
+    }
+    .page-hero-inner{
+      position:relative;z-index:1;max-width:var(--max-w);margin:0 auto;padding:60px var(--px) 0;
+    }
+    .page-hero-label{
+      font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:16px;
+      opacity:0;animation:fadeUp .7s .2s var(--ease) forwards;
+    }
+    .page-hero-title{
+      font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);
+      font-weight:500;line-height:1.2;margin-bottom:16px;
+      opacity:0;animation:fadeUp .7s .4s var(--ease) forwards;
+    }
+    .page-hero-title em{font-style:italic;color:var(--gold)}
+    .page-hero-sub{
+      font-size:.95rem;font-weight:300;color:var(--text-mid);max-width:520px;
+      margin:0 auto;line-height:1.8;
+      opacity:0;animation:fadeUp .7s .6s var(--ease) forwards;
+    }
+
+    /* CONTENT SECTION */
+    .tc-section{
+      max-width:720px;margin:0 auto;padding:0 var(--px) 80px;
+    }
+
+    /* Content cards */
+    .tc-card{
+      background:var(--bg-card);border:1px solid var(--border);border-radius:16px;
+      padding:40px 36px;margin-bottom:24px;
+    }
+    .tc-card h3{
+      font-family:var(--font-display);font-size:1.15rem;font-weight:500;
+      margin-bottom:20px;color:var(--text);
+    }
+    .tc-card p{
+      font-size:.88rem;font-weight:300;color:var(--text-mid);line-height:1.8;
+      margin-bottom:14px;
+    }
+    .tc-card p:last-child{margin-bottom:0}
+
+    .tc-card a{
+      color:var(--gold);border-bottom:1px solid rgba(196,168,130,0.3);
+      transition:border-color .3s;
+    }
+    .tc-card a:hover{border-color:var(--gold)}
+
+    /* List inside cards */
+    .tc-list{
+      list-style:none;margin:0 0 14px;padding:0;
+    }
+    .tc-list li{
+      font-size:.86rem;font-weight:300;color:var(--text-mid);line-height:1.8;
+      padding:6px 0 6px 20px;position:relative;
+      border-bottom:1px solid var(--border);
+    }
+    .tc-list li:last-child{border-bottom:none}
+    .tc-list li::before{
+      content:'';position:absolute;left:0;top:14px;
+      width:6px;height:6px;border-radius:50%;
+      background:var(--gold);opacity:.5;
+    }
+
+    /* Timeframe table */
+    .tc-timeframes{
+      width:100%;border-collapse:collapse;margin:12px 0 14px;
+    }
+    .tc-timeframes td{
+      font-size:.85rem;font-weight:300;color:var(--text-mid);
+      padding:8px 16px 8px 0;border-bottom:1px solid var(--border);
+    }
+    .tc-timeframes td:first-child{
+      color:var(--text);font-weight:400;white-space:nowrap;
+    }
+    .tc-timeframes tr:last-child td{border-bottom:none}
+
+    /* Highlight notice */
+    .tc-notice{
+      background:var(--gold-dim);border:1px solid var(--border-strong);
+      border-radius:12px;padding:20px 24px;margin:16px 0;
+      display:flex;gap:12px;align-items:flex-start;
+    }
+    .tc-notice-icon{
+      width:18px;min-width:18px;height:18px;color:var(--gold);margin-top:3px;
+    }
+    .tc-notice p{
+      font-size:.85rem;font-weight:300;color:var(--text-mid);line-height:1.8;
+      margin:0;
+    }
+
+    /* Back link */
+    .tc-back{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--text-dim);transition:color .3s;margin-top:8px;
+    }
+    .tc-back:hover{color:var(--gold)}
+    .tc-back svg{width:16px;height:16px}
+
+    /* Last updated */
+    .tc-updated{
+      font-size:.75rem;color:var(--text-dim);letter-spacing:.04em;
+      text-align:center;margin-top:32px;padding-top:20px;
+      border-top:1px solid var(--border);
+    }
+
+    /* FOOTER */
+    .footer{border-top:1px solid var(--border);padding:56px var(--px) 28px}
+    .footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
+    .footer-brand{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--text);margin-bottom:12px}
+    .footer-brand b{color:var(--gold)}
+    .footer-desc{font-size:.82rem;color:var(--text-dim);line-height:1.8;max-width:280px}
+    .footer-heading{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mid);margin-bottom:16px}
+    .footer-links{list-style:none}
+    .footer-links li{margin-bottom:8px}
+    .footer-links a{font-size:.82rem;color:var(--text-dim);transition:color .3s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:20px;text-align:center;font-size:.7rem;color:var(--text-dim);letter-spacing:.04em;max-width:var(--max-w);margin:0 auto}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+    .nav-voucher { color: var(--gold, #D4A96A) !important; }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    @media(max-width:960px){
+      .footer-inner{grid-template-columns:1fr;text-align:center;gap:32px}
+      .footer-desc{margin:0 auto}
+      .footer{padding:32px var(--px) 20px}
+      .footer-inner{gap:20px}
+      .footer-links li{margin-bottom:4px}
+    }
+    @media(max-width:640px){
+      .tc-card{padding:28px 22px}
+      .page-hero-inner{padding:40px var(--px) 0}
+      .tc-notice{padding:16px 16px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">
+      <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" data-img="logo" alt="Allure Microblading"  width="36" height="36">
+    </a>
+    <div class="nav-links">
+      <a href="/" class="nav-link active">Home</a>
+      <div class="dropdown"><div class="nav-link dropdown-toggle">Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></div>
+        <div class="dropdown-menu">
+          <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+          <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+          <a href="/lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+          <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+          <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="nav-link">Pricing</a>
+      <a href="/gallery.html" class="nav-link">Gallery</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/faq.html" class="nav-link">FAQ</a>
+      <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" style="display:none;">
+    <a href="/" onclick="closeMenu()">Home</a>
+    <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+      <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+      <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+      <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+      <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+      <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+    </div>
+    <a href="/pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/about.html" onclick="closeMenu()">About</a>
+    <a href="/faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="/contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Please Read Carefully</div>
+      <h1 class="page-hero-title">Terms &amp; <em>Conditions</em></h1>
+      <p class="page-hero-sub">The following terms apply to all cosmetic tattoo services provided by Allure Microblading. By booking an appointment you agree to these terms in full.</p>
+    </div>
+  </section>
+
+  <!-- TERMS CONTENT -->
+  <section class="tc-section">
+
+    <!-- 1. INFORMED CONSENT -->
+    <div class="tc-card reveal">
+      <h3>Informed Consent</h3>
+      <p>Cosmetic tattooing (including microblading, nano brows, ombre brows, eyeliner, lip blush, beauty marks, freckles and related procedures) is a form of semi-permanent makeup that involves depositing pigment into the skin. By proceeding with a booking you acknowledge and accept the following:</p>
+      <ul class="tc-list">
+        <li>The procedure involves the use of needles and pigments applied to the skin, which may cause mild discomfort, redness, swelling and tenderness in the treated area</li>
+        <li>Results are semi-permanent and will fade over time. Colour, shape and retention will vary between individuals depending on skin type, lifestyle, sun exposure, skincare products and aftercare</li>
+        <li>Immediately after the procedure the colour will appear darker and bolder than the final result. The true colour and shape will settle over the following weeks as the skin goes through its natural recovery process</li>
+        <li>Multiple sessions are typically required to achieve the desired result. The initial session creates the foundation and a follow-up session is recommended to refine the shape, density and colour</li>
+        <li>Jessica will design and customise your treatment based on your facial features, preferences and skin tone. While every effort is made to achieve symmetry and your desired outcome, perfect symmetry is not naturally occurring and minor variations are normal</li>
+        <li>You have had the opportunity to ask questions about the procedure, aftercare, expected results and potential risks before proceeding</li>
+      </ul>
+    </div>
+
+    <!-- 2. ELIGIBILITY -->
+    <div class="tc-card reveal">
+      <h3>Who We Cannot Treat</h3>
+      <p>For your safety, we are unable to perform cosmetic tattoo procedures on the following individuals:</p>
+      <ul class="tc-list">
+        <li>Those under 16 years of age</li>
+        <li>Those under 18 years of age unless accompanied by a parent or legal guardian who provides written consent on the day of the appointment</li>
+        <li>People with diabetes unless you have written clearance from your doctor</li>
+        <li>Pregnant or lactating women</li>
+        <li>People with glaucoma or those taking blood thinning medications (e.g. aspirin, warfarin)</li>
+        <li>People with any active skin disease, irritation or infection in or around the treatment area</li>
+        <li>People with known allergies to makeup, pigments or colours</li>
+        <li>Those with easily triggered post-inflammatory hyperpigmentation</li>
+        <li>Those with a history of keloid or hypertrophic scarring</li>
+        <li>Those with active skin cancer in the area to be treated</li>
+        <li>Those with haemophilia or a bleeding disorder</li>
+        <li>Those with healing disorders, uncontrolled high blood pressure, heart conditions or mitral valve disorder</li>
+        <li>Those on skin medications such as Roaccutane (must wait 6 to 12 months after completing the course) or steroids that thin and sensitise the skin</li>
+        <li>Those with serious medical conditions such as cancer, epilepsy, seizures or autoimmune disorders</li>
+        <li>Those currently undergoing radiotherapy or chemotherapy</li>
+        <li>Those with transmittable blood-borne conditions such as HIV or Hepatitis</li>
+        <li>Those who have recently had Botox, Dysport or dermal filler in or near the treatment area (must wait at least 6 weeks)</li>
+      </ul>
+
+      <div class="tc-notice">
+        <svg class="tc-notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p>Please let us know if you have or have had allergic reactions to topical anaesthetics. We use lidocaine and prilocaine.</p>
+      </div>
+
+      <p>If you are under the care of a physician you must obtain written clearance from them prior to your procedure.</p>
+    </div>
+
+    <!-- 3. CLIENT DISCLOSURE -->
+    <div class="tc-card reveal">
+      <h3>Client Disclosure and Responsibility</h3>
+      <p>You are required to fully and honestly disclose all relevant medical conditions, medications, allergies, skin conditions, previous cosmetic tattoo work and any other information that may affect the safety or outcome of your procedure.</p>
+      <p>This includes but is not limited to medications, supplements, recent treatments (e.g. chemical peels, laser, Botox, fillers), skin conditions, autoimmune conditions and any changes to your health since your last appointment.</p>
+      <p>Failure to disclose relevant information may compromise the safety and results of the procedure. Allure Microblading accepts no liability for complications, adverse reactions or unsatisfactory results arising from incomplete or inaccurate information provided by the client.</p>
+      <p>By proceeding with a booking you confirm that the information you have provided is true and complete to the best of your knowledge.</p>
+    </div>
+
+    <!-- 4. PATCH TESTING -->
+    <div class="tc-card reveal">
+      <h3>Patch Testing</h3>
+      <p>A patch test is available upon request at additional cost and must be completed at least 48 hours before the main procedure. If you choose not to undertake a patch test, you accept the risk and release the technician from any liability related to allergic reactions or sensitivities to the pigments, topical anaesthetics or other products used during treatment.</p>
+      <p>Please be aware that there are traces of Nickel in the needles and pigments used. The patch test may not conclusively confirm a Nickel allergy or predict all possible reactions to the products used.</p>
+    </div>
+
+    <!-- 5. RESULTS & LIMITATIONS -->
+    <div class="tc-card reveal">
+      <h3>Results and Limitations</h3>
+      <p>Every effort is made to deliver the best possible outcome for each client. However, Allure Microblading cannot guarantee specific results as each person's skin responds to pigment and technique differently.</p>
+      <p>Factors that influence results include skin type, skin condition, oiliness, health conditions, medications, lifestyle, sun exposure, skincare routine and how closely aftercare instructions are followed. Clients with oily skin, large pores or certain skin conditions may experience faster fading, less defined strokes or lower pigment retention.</p>
+      <p>If you are unhappy with the outcome of your treatment, please contact us. We are committed to working with you and will always do our best to achieve a result you are happy with. However, we do not offer refunds or free corrections as the treatment has been carried out at our time and cost, using single-use materials.</p>
+    </div>
+
+    <!-- 6. AFTERCARE -->
+    <div class="tc-card reveal">
+      <h3>Aftercare</h3>
+      <p>Detailed aftercare instructions will be provided following your procedure. It is your responsibility to follow these instructions carefully, as proper aftercare is essential to achieving the best possible result and avoiding complications.</p>
+      <p>Allure Microblading accepts no responsibility for poor results, pigment loss, infection or other complications that arise from failure to follow the aftercare instructions provided.</p>
+    </div>
+
+    <!-- 7. BOOKING & DEPOSITS -->
+    <div class="tc-card reveal">
+      <h3>Booking and Deposits</h3>
+      <p>A deposit of $50 is required to secure your appointment. The deposit is valid for 6 months and is non-refundable. It will be deducted from your final payment after the second session. The deposit must be received at least 24 hours prior to your appointment or the booking will be cancelled.</p>
+      <p>Rescheduling must be done at least 3 days prior to your appointment.</p>
+      <p>Any client who does not attend a scheduled appointment will forfeit their deposit. Before being rescheduled, the client will be required to pay for any future appointments in full, plus the fee for the missed appointment. No exceptions.</p>
+      <p>You must arrive on time. Late arrivals may result in the loss of your appointment and deposit, as delays affect the rest of the day's schedule.</p>
+    </div>
+
+    <!-- 8. REFUNDS -->
+    <div class="tc-card reveal">
+      <h3>Refund and Cancellation Policy</h3>
+      <p>No refund, compensation or exchange is offered for any completed service, missed appointment or in any other case. We reserve the right to refuse service at our discretion. Prices are subject to change at any time without prior notice.</p>
+      <p>This policy does not affect your rights under the Consumer Guarantees Act 1993. All services are performed with reasonable care and skill by a qualified and experienced cosmetic tattoo technician.</p>
+    </div>
+
+    <!-- 9. TOUCH-UP SESSIONS -->
+    <div class="tc-card reveal">
+      <h3>Touch-Up Sessions</h3>
+      <p>Cosmetic tattooing typically requires more than one session. We recommend at least 2 sessions for the best result. The first touch-up must be booked and completed within the following timeframes:</p>
+
+      <table class="tc-timeframes">
+        <tr><td>Eyebrow and Eyeliner</td><td>4 to 6 weeks</td></tr>
+        <tr><td>Lips</td><td>8 to 10 weeks</td></tr>
+      </table>
+
+      <p>An additional charge will apply for clients who do not schedule or complete their first touch-up session within these timeframes.</p>
+    </div>
+
+    <!-- 10. PREVIOUS WORK -->
+    <div class="tc-card reveal">
+      <h3>Previous Cosmetic Tattoo Work</h3>
+      <p>If you have had your eyebrows or any other area previously tattooed by another technician, you must email us a clear photo before booking. We cannot guarantee results and must confirm that the existing work is suitable for correction or cover-up.</p>
+      <p>If the previous work is too dark, dense, discoloured or oversized, a colour correction procedure or tattoo removal may be required before we can begin. Cover-up, correction and reconstruction work carries an additional charge of $100 on top of our listed prices. For full pricing details, please visit our <a href="/pricing.html">Pricing page</a>.</p>
+    </div>
+
+    <!-- 11. HYGIENE & SAFETY -->
+    <div class="tc-card reveal">
+      <h3>Hygiene and Safety Standards</h3>
+      <p>Allure Microblading operates in compliance with New Zealand health and safety regulations. All needles, blades and machine components are single-use, sterile and disposed of immediately after each procedure. Work surfaces and equipment are sanitised between clients using hospital-grade disinfectant.</p>
+      <p>We use pigments that are compliant with European ResAP (2008), New Zealand, Australian and US FDA cosmetic safety standards.</p>
+    </div>
+
+    <!-- 12. PHOTOGRAPHY & CONSENT -->
+    <div class="tc-card reveal">
+      <h3>Photography and Image Use</h3>
+      <p>Photographs will be taken before, during and after your procedure for clinical reference and record-keeping purposes.</p>
+      <p>These images may also be used by Allure Microblading for marketing, portfolio and educational purposes on our website, social media channels and printed materials. Images will never include your full name or personal details without your explicit permission.</p>
+      <p>If you do not wish for your images to be used for marketing purposes, please let Jessica know before or during your appointment and a note will be placed on your file. You may also withdraw consent for marketing use at any time by contacting us directly.</p>
+    </div>
+
+    <!-- 13. PRIVACY & CLIENT RECORDS -->
+    <div class="tc-card reveal">
+      <h3>Privacy and Client Records</h3>
+      <p>Allure Microblading collects and stores personal information including your name, contact details, medical history, consent forms and treatment photographs. This information is collected for the purpose of providing safe and effective cosmetic tattoo services and is handled in accordance with the Privacy Act 2020 (NZ).</p>
+      <p>Your personal information will not be shared with third parties except where required by law, for insurance purposes or with your explicit consent. Client records are stored securely and retained for a minimum of 10 years in line with health industry best practice.</p>
+      <p>You have the right to request access to, correction of, or deletion of your personal information at any time by contacting us directly.</p>
+    </div>
+
+    <!-- 14. LIMITATION OF LIABILITY -->
+    <div class="tc-card reveal">
+      <h3>Limitation of Liability</h3>
+      <p>Allure Microblading and its technician Jessica take all reasonable care to ensure the safety, comfort and quality of every procedure. However, to the fullest extent permitted by New Zealand law, Allure Microblading will not be held liable for:</p>
+      <ul class="tc-list">
+        <li>Allergic reactions, sensitivities or adverse skin responses, particularly where a patch test was offered and declined or where relevant medical information was not disclosed</li>
+        <li>Variations in pigment colour, retention or fading that occur naturally as part of the skin's response to the treatment</li>
+        <li>Unsatisfactory results arising from the client's failure to follow aftercare instructions provided</li>
+        <li>Complications arising from undisclosed medical conditions, medications or treatments</li>
+        <li>Infection or complications resulting from the client's own actions or negligence during the recovery period</li>
+        <li>Any indirect, consequential or incidental loss or damage arising from or related to the procedure</li>
+      </ul>
+      <p>Nothing in these terms excludes or limits liability that cannot be excluded or limited under New Zealand law, including the Consumer Guarantees Act 1993.</p>
+    </div>
+
+    <!-- 15. GOVERNING LAW -->
+    <div class="tc-card reveal">
+      <h3>Governing Law</h3>
+      <p>These terms and conditions are governed by and construed in accordance with the laws of New Zealand. Any disputes arising from these terms or from services provided by Allure Microblading shall be subject to the exclusive jurisdiction of the New Zealand courts.</p>
+    </div>
+
+    <!-- LAST UPDATED -->
+    <div class="tc-updated reveal">Last updated: April 2026</div>
+
+    <!-- Back link -->
+    <a href="/booking-agreement.html" class="tc-back reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Booking Agreement
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Allure <b>Microblading</b></div>
+        <p class="footer-desc">Auckland's specialist cosmetic tattoo studio. Brows, eyes and lips — done properly, since 2016.</p>
+        <div style="margin-top:14px;display:flex;gap:16px"><a href="/terms-of-use.html" style="font-size:.75rem;color:#8A837C;transition:color .3s" onmouseover="this.style.color='#C4A882'" onmouseout="this.style.color='#8A837C'">Terms of Use</a><a href="/privacy-policy.html" style="font-size:.75rem;color:#8A837C;transition:color .3s" onmouseover="this.style.color='#C4A882'" onmouseout="this.style.color='#8A837C'">Privacy Policy</a></div>
+      </div>
+      <div><div class="footer-heading">Treatments</div><ul class="footer-links"><li><a href="/eyebrow.html">Eyebrow Treatments</a></li><li><a href="/eyeliner.html">Eyeliner &amp; Lash Enhancement</a></li><li><a href="/lip.html">Lip Blush Tattoos</a></li><li><a href="/face.html">Beauty Marks &amp; Freckles</a></li><li><a href="/pmu-removal.html">Non-Laser Removal</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/blog.html">Blog</a></li><li><a href="https://m.alluremicroblading.co.nz/gift-card" target="_blank" rel="noopener">Gift Vouchers</a></li></ul></div>
+      <div><div class="footer-heading">Contact</div><ul class="footer-links"><li><a href="tel:0212160465">021 216 0465</a></li><li>40 St Benedicts Street<br>Eden Terrace, Auckland</li></ul></div>
+    </div>
+    <div class="footer-bottom">&copy; 2016–2026 Allure Microblading. All rights reserved. Auckland, New Zealand.</div>
+  </footer>
+
+  <script>
+    const nav=document.getElementById('nav');
+    window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)});
+    const hamburger=document.getElementById('hamburger'),mm=document.getElementById('mobileMenu');
+    hamburger.addEventListener('click',()=>{
+      const isOpen=mm.classList.toggle('open');
+      hamburger.classList.toggle('active',isOpen);
+      mm.style.display=isOpen?'flex':'none';
+      document.body.style.overflow=isOpen?'hidden':'';
+    });
+    function toggleMobServices(){
+      var btn=document.getElementById('mobServicesToggle');
+      var sub=document.getElementById('mobSub');
+      btn.classList.toggle('open');
+      sub.classList.toggle('open');
+    }
+    function closeMenu(){
+      mm.classList.remove('open');
+      hamburger.classList.remove('active');
+      mm.style.display='none';
+      document.body.style.overflow='';
+    }
+    const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+
+</body>
+</html>

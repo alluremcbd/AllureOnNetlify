@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#2C2825;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+<title>Contact | Allure Microblading Auckland – Book Your Appointment</title>
+<meta name="description" content="Book your cosmetic tattoo consultation or appointment at Allure Microblading in Eden Terrace, Auckland. Contact us by phone, email, or online booking.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/nav.css">
+<style>
+
+:root {
+  --bg: #2C2825;
+  --bg-mid: #322E2B;
+  --bg-card: #2F2B28;
+  --text: #F2EAE0;
+  --text-mid: #C8B8A4;
+  --text-dim: #8A7F75;
+  --white: #F2EAE0;
+  --gold: #C4A882;
+  --gold-light: #D4B896;
+  --gold-dim: #A08A6E;
+  --gold-border: rgba(196,168,130,0.22);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ═══ FADE IN ═══ */
+.fade-up {
+  opacity: 0; transform: translateY(28px);
+  animation: fadeUp .8s ease forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+.delay-1 { animation-delay: .1s; }
+.delay-2 { animation-delay: .25s; }
+.delay-3 { animation-delay: .4s; }
+.delay-4 { animation-delay: .55s; }
+
+/* ═══ HERO — editorial, centred ═══ */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 80px clamp(24px, 6vw, 100px) 72px;
+  text-align: center;
+  position: relative;
+  background: var(--bg) !important;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(196,168,130,.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 680px; }
+.hero-label {
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold) !important;
+  margin-bottom: 24px;
+  display: block;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  font-weight: 400;
+  color: var(--white) !important;
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+.hero h1 em { font-style: italic; color: var(--gold-light) !important; }
+.hero-text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-mid) !important;
+  line-height: 1.85;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ═══ BOOKING BAR ═══ */
+.booking-bar {
+  background: var(--gold) !important;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 clamp(24px, 6vw, 100px);
+  height: 72px;
+  gap: 28px; flex-wrap: wrap;
+}
+.booking-bar p {
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #2C2825 !important;
+}
+.btn-dark {
+  display: inline-block;
+  background: #2C2825 !important;
+  color: var(--gold) !important;
+  font-family: 'Jost', sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border: none; cursor: pointer;
+  transition: background .25s;
+  white-space: nowrap;
+}
+.btn-dark:hover { background: #1a1714 !important; }
+
+/* ═══ CONTACT CARDS — 3-column editorial grid ═══ */
+.cards-section {
+  padding: clamp(56px, 7vw, 100px) clamp(24px, 6vw, 100px);
+  background: var(--bg) !important;
+}
+.cards-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.section-tag {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold) !important;
+  display: inline-flex; align-items: center; gap: 16px;
+}
+.section-tag::before,
+.section-tag::after {
+  content: '';
+  width: 40px; height: 1px;
+  background: var(--gold-border);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border);
+  padding: 40px 36px;
+  text-align: center;
+  transition: border-color .3s, transform .3s;
+}
+.card:hover {
+  border-color: rgba(196,168,130,.4);
+  transform: translateY(-2px);
+}
+.card-icon {
+  width: 44px; height: 44px;
+  margin: 0 auto 24px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+}
+.card-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--white) !important;
+  margin-bottom: 12px;
+}
+.card p, .card a {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-mid) !important;
+  line-height: 1.7;
+  display: block;
+  transition: color .2s;
+}
+.card a:hover { color: var(--gold) !important; }
+
+/* ═══ DETAILS SECTION — hours + social (2 column) ═══ */
+.details-section {
+  padding: 0 clamp(24px, 6vw, 100px) clamp(56px, 7vw, 100px);
+  background: var(--bg) !important;
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.detail-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border);
+  padding: 40px 36px;
+}
+.detail-card h3 {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold) !important;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gold-border);
+}
+
+/* hours */
+.hours { list-style: none; }
+.hours li {
+  display: flex; justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(196,168,130,.08);
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text) !important;
+}
+.hours li:last-child { border-bottom: none; }
+.hours li span:first-child { color: var(--text-mid) !important; }
+.hours li.closed { opacity: .35; }
+.hours-note {
+  margin-top: 20px;
+  font-size: .95rem;
+  font-weight: 300;
+  color: var(--text-dim) !important;
+  line-height: 1.7;
+}
+
+/* social + connect */
+.connect-text {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-mid) !important;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.social-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+.social-pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: .92rem;
+  font-weight: 400;
+  color: var(--text-mid) !important;
+  padding: 12px 22px;
+  border: 1px solid var(--gold-border);
+  transition: all .3s;
+}
+.social-pill:hover {
+  border-color: var(--gold);
+  color: var(--gold) !important;
+  transform: translateY(-1px);
+}
+.social-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+.btn-gold {
+  display: inline-block;
+  background: var(--gold) !important;
+  color: #2C2825 !important;
+  font-family: 'Jost', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: none; cursor: pointer;
+  transition: background .25s;
+}
+.btn-gold:hover { background: var(--gold-light) !important; }
+
+/* ═══ MAP ═══ */
+.map-section {
+  background: var(--bg) !important;
+  border-top: 1px solid var(--gold-border);
+}
+.map-link { display: block; color: inherit !important; }
+.map-wrap {
+  width: 100%; height: 380px;
+  position: relative; overflow: hidden;
+  cursor: pointer;
+}
+.map-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: opacity .3s;
+}
+.map-link:hover .map-wrap img { opacity: .85; }
+.map-fallback {
+  display: none; width: 100%; height: 100%;
+  background: var(--bg-mid) !important;
+  align-items: center; justify-content: center;
+}
+.map-fallback-inner { text-align: center; }
+.map-fallback-inner p { font-size: 1.05rem; font-weight: 300; color: var(--text) !important; margin: 14px 0 8px; }
+.map-fallback-inner span { font-size: .8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gold) !important; }
+.map-card {
+  position: absolute;
+  bottom: 32px; left: clamp(24px, 6vw, 100px);
+  background: rgba(44,40,37,.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--gold-border);
+  padding: 24px 28px;
+  max-width: 260px;
+}
+.map-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 400;
+  color: var(--white) !important;
+  margin-bottom: 8px;
+}
+.map-card p {
+  font-size: .92rem; font-weight: 300;
+  color: var(--text-mid) !important;
+  line-height: 1.7; margin-bottom: 14px;
+}
+.map-card .cta {
+  font-size: .76rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold) !important;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:960px){
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { min-height: auto; padding: 48px 24px 56px; }
+  .booking-bar { padding: 18px 24px; height: auto; }
+  .cards-grid { grid-template-columns: 1fr; gap: 16px; }
+  .details-grid { grid-template-columns: 1fr; gap: 16px; }
+  .social-row { gap: 8px; }
+  .map-card { left: 20px; bottom: 20px; padding: 18px 20px; max-width: 220px; }
+}
+
+
+  .nav-voucher { color: var(--gold, #D4A96A) !important; }
+  /* Mobile menu — hidden by default, shown only when .open is toggled by JS */
+  .mobile-menu .mob-sub {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.mobile-menu .mob-sub.open { max-height: 600px; min-height: 155px; }
+.mobile-menu .mob-sub a {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem; font-weight: 400;
+  color: #B8B0A8;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" alt="Allure Microblading" width="36" height="36">
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <div class="dropdown"><div class="nav-link dropdown-toggle">Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></div>
+      <div class="dropdown-menu">
+        <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+        <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+        <a href="/lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+        <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+      </div>
+    </div>
+    <a href="/pricing.html" class="nav-link">Pricing</a>
+    <a href="/gallery.html" class="nav-link">Gallery</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/faq.html" class="nav-link">FAQ</a>
+    <a href="/blog.html" class="nav-link">Blog</a>
+    <a href="/contact.html" class="nav-link active">Contact</a>
+    <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+  </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" onclick="closeMenu()">Home</a>
+  <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+    <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+    <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+    <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+    <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+  </div>
+  <a href="/pricing.html" onclick="closeMenu()">Pricing</a>
+  <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="/about.html" onclick="closeMenu()">About</a>
+  <a href="/faq.html" onclick="closeMenu()">FAQ</a>
+  <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="/contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+</div>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner fade-up">
+    <span class="hero-label">Eden Terrace · Auckland</span>
+    <h1>Get in <em>Touch</em></h1>
+    <p class="hero-text">Have a question, need guidance on which service is right for you, or ready to book? We are here and happy to help.</p>
+  </div>
+</section>
+
+<!-- BOOKING BAR -->
+<div class="booking-bar fade-up delay-1">
+  <p>Ready to book? Secure your appointment online in minutes.</p>
+  <a href="/booking-agreement.html" class="btn-dark">Book Online Now</a>
+</div>
+
+<!-- CONTACT CARDS -->
+<section class="cards-section">
+  <div class="cards-header fade-up delay-2">
+    <div class="section-tag">Reach Us</div>
+  </div>
+  <div class="cards-grid fade-up delay-2">
+
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h3>Visit the Studio</h3>
+      <p>40 St Benedicts Street<br>Eden Terrace, Auckland 1010<br>New Zealand</p>
+      <a href="https://maps.google.com/?q=40+St+Benedicts+Street,+Eden+Terrace,+Auckland" target="_blank" rel="noopener">Open in Google Maps →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.09 5.18 2 2 0 0 1 5.08 3h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <h3>Call or Text</h3>
+      <a href="tel:+64212160465">021 216 0465</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <h3>Email Us</h3>
+        <a href="mailto:alluremcbd@gmail.com">alluremcbd@gmail.com</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOURS + SOCIAL -->
+<section class="details-section">
+  <div class="details-grid">
+
+    <div class="detail-card fade-up delay-3">
+      <h3>Studio Hours</h3>
+      <ul class="hours">
+        <li><span>Monday to Saturday</span><span>10:00 am – 6:00 pm</span></li>
+        <li class="closed"><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <p class="hours-note">By appointment only. Walk-ins are not accepted.</p>
+    </div>
+
+    <div class="detail-card fade-up delay-4">
+      <h3>Connect With Us</h3>
+      <p class="connect-text">Follow us for daily work, videos, and studio updates.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/alluremicroblading/" target="_blank" rel="noopener" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/AllureMicroBladingStudio" target="_blank" rel="noopener" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.tiktok.com/@alluremicrobladingnz" target="_blank" rel="noopener" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          TikTok
+        </a>
+      </div>
+      <a href="/booking-agreement.html" class="btn-gold">Book Your Appointment</a>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
+  });
+
+  function toggleMobServices() {
+    var btn = document.getElementById('mobServicesToggle');
+    var sub = document.getElementById('mobSub');
+    btn.classList.toggle('open');
+    sub.classList.toggle('open');
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+</script>
+</body>
+</html>

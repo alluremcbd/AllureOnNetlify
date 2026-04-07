@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons (PUT HERE) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">  
+
+  <title>Eyebrow Tattoo Auckland | Microblading, Nano Brows, Ombré Powder Brows — Allure Microblading</title>
+  <meta name="description" content="Eyebrow cosmetic tattoo services at Allure Microblading Auckland. Microblading, Nano Brows, Ombré Powder Brows, Combination Brows, and Men's Eyebrow Tattoos. View pricing, gallery, and book today.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --charcoal: #2C2825;
+      --charcoal-light: #363230;
+      --charcoal-mid: #46403a;
+      --gold: #C4A882;
+      --gold-light: #d4bc9a;
+      --gold-dim: rgba(196, 168, 130, 0.15);
+      --gold-border: rgba(196, 168, 130, 0.12);
+      --cream: #F5F0EB;
+      --cream-body: #B8B0A8;
+      --cream-muted: #8A837C;
+      --white: #F5F0EB;
+      --bg: #2C2825;
+      --card-bg: #3a3634;
+      --card-img-bg: #46403a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      background: var(--bg);
+      color: var(--cream-body);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ══════════════ HERO ══════════════ */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 90px 24px 70px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(154,125,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(34px, 5.5vw, 52px);
+      color: var(--cream);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--cream-muted);
+      max-width: 540px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+    .hero-divider {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+
+    /* ══════════════ SERVICE CARDS ══════════════ */
+    .services {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 20px;
+    }
+
+    .service-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 60px;
+      border: 1px solid var(--gold-border);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--card-bg);
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.15s; }
+    .service-card:nth-child(3) { animation-delay: 0.2s; }
+    .service-card:nth-child(4) { animation-delay: 0.25s; }
+    .service-card:nth-child(5) { animation-delay: 0.3s; }
+
+    .service-card:nth-child(even) .service-img { order: 2; }
+    .service-card:nth-child(even) .service-info { order: 1; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .service-img {
+      position: relative;
+      min-height: 360px;
+      background: var(--card-img-bg);
+      overflow: hidden;
+    }
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .img-placeholder {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--cream-muted);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+    .img-placeholder span {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 8px;
+      opacity: 0.3;
+    }
+
+    .service-info {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .service-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 26px;
+      color: var(--cream);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .service-desc {
+      font-size: 14.5px;
+      color: var(--cream-body);
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+    .service-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--gold);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .service-price small {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--cream-muted);
+      letter-spacing: 0.02em;
+    }
+    .service-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-book {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: var(--gold);
+      padding: 12px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-book:hover { background: var(--gold-light); }
+
+    .btn-gallery {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: transparent;
+      border: 1px solid var(--gold-border);
+      padding: 12px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-gallery:hover {
+      border-color: var(--gold);
+      color: var(--cream);
+    }
+
+    /* ══════════════ TOUCH-UP BADGE ══════════════ */
+    .touchup-badge {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: 3px;
+    }
+    .touchup-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 1px;
+    }
+    .touchup-text {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--cream-body);
+    }
+    .touchup-text strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .touchup-text .touchup-price {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+    }
+    .pricing-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 24px 60px;
+    }
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .pricing-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .pricing-header p {
+      font-size: 14px;
+      color: var(--cream-muted);
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pricing-table tr {
+      border-bottom: 1px solid var(--gold-border);
+    }
+    .pricing-table tr:last-child {
+      border-bottom: none;
+    }
+    .pricing-table td {
+      padding: 16px 0;
+      vertical-align: top;
+    }
+    .pricing-table .pt-service {
+      color: var(--cream);
+      font-weight: 500;
+      font-size: 14.5px;
+      padding-right: 16px;
+    }
+    .pricing-table .pt-detail {
+      color: var(--cream-muted);
+      font-size: 13px;
+      padding-right: 16px;
+    }
+    .pricing-table .pt-price {
+      text-align: right;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+
+    .pricing-note {
+      margin-top: 28px;
+      padding: 20px 24px;
+      background: var(--card-bg);
+      border-left: 3px solid var(--gold);
+      border-radius: 2px;
+    }
+    .pricing-note p {
+      font-size: 13.5px;
+      color: var(--cream-body);
+      line-height: 1.7;
+    }
+    .pricing-note strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    /* ══════════════ CTA ══════════════ */
+    .cta-section {
+      text-align: center;
+      padding: 50px 24px 80px;
+      border-top: 1px solid var(--gold-border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 26px;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+    .cta-section p {
+      color: var(--cream-muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    /* ══════════════ RESPONSIVE ══════════════ */
+    @media (max-width: 960px) {
+      .service-card {
+        grid-template-columns: 1fr;
+      
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+      .service-card:nth-child(even) .service-img { order: 0; }
+      .service-card:nth-child(even) .service-info { order: 0; }
+      .service-img { min-height: 260px; }
+      .service-info { padding: 28px 24px; }
+      .service-name { font-size: 22px; }
+      .service-price { font-size: 24px; }
+      .hero { padding: 70px 20px 50px; }
+      .pricing-table .pt-service { font-size: 13.5px; }
+      .pricing-table .pt-price { font-size: 16px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+  
+  
+
+  .hero { padding-top: 100px !important; }
+
+  .nav-voucher { color: var(--gold, #D4A96A) !important; }
+
+  
+  /* Mobile menu — hidden by default, shown only when .open is toggled by JS */
+  .mobile-menu .mob-sub {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.mobile-menu .mob-sub.open { max-height: 600px; min-height: 155px; }
+.mobile-menu .mob-sub a {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem; font-weight: 400;
+  color: #B8B0A8;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV (shared) -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" data-img="logo" alt="Allure Microblading"  width="36" height="36">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+
+    <div class="dropdown">
+      <div class="nav-link dropdown-toggle">Services
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </div>
+      <div class="dropdown-menu">
+        <a href="eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+        <a href="eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+        <a href="lip.html" class="dropdown-item">Lip Blush Tattoos</a>
+        <a href="face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <!-- NOTE: pmu-removal.html was referenced in the original index.html but not provided as a file. -->
+        <a href="pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
+      </div>
+    </div>
+
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+  <a href="/booking-agreement.html" class="nav-link">Book Online</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+
+  <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mob-sub" id="mobSub">
+    <a href="eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+    <a href="eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+    <a href="lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+    <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+  </div>
+
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="faq.html" onclick="closeMenu()">FAQ</a>
+  <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://m.alluremicroblading.co.nz/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+</div>
+
+
+
+  <!-- NAV -->
+  <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="faq.html" onclick="closeMenu()">FAQ</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
+  </div>
+
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <span class="hero-label">Eyebrow Services</span>
+  <h1>Eyebrow <em>Tattoo</em></h1>
+  <p class="hero-sub">From natural feathered strokes to soft powdered shading, we offer five distinct eyebrow tattoo techniques tailored to your skin type, face shape, and personal style.</p>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- ═══════════════ SERVICE CARDS ═══════════════ -->
+<section class="services">
+
+  <!-- 1. MICROBLADING BROWS -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_158176aaa64140f7aac1ce58800c1288~mv2.jpg" data-img="microblading_brows" alt="Microblading Brows Auckland — Allure Microblading">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Classic Technique</span>
+      <h2 class="service-name">Microblading Brows</h2>
+      <p class="service-desc">A handcrafted technique using a fine blade to create individual, feathered hair strokes that mimic natural brow hairs. Ideal for normal to dry skin. Microblading delivers clean, natural-looking brows with a soft, refined finish, a time-tested method trusted by our studio since 2016.</p>
+      <div class="service-price">$500 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-microblading" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-microblading" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. NANO BROWS -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_dca9d0d306e04ae1b892498123ce6190~mv2.jpg" data-img="nano_brows" alt="Nano Brows Auckland — Allure Microblading">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Precision Machine Strokes</span>
+      <h2 class="service-name">Nano Brows</h2>
+      <p class="service-desc">Ultra-fine, hyper-realistic hair strokes created with a digital machine and single-point nano needle. Nano brows suit all skin types, including oily and mature skin, and offer exceptional precision and longevity. Also known as machine hair strokes or nano feathering.</p>
+      <div class="service-price">$650 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-nano" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-nano" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. OMBRÉ POWDER BROWS -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_402dec78f21e49b5b864ee4d555e4ad5~mv2.jpg" data-img="ombre_powder_brows" alt="Ombré Powder Brows Auckland — Allure Microblading">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Soft Shaded Effect</span>
+      <h2 class="service-name">Ombré Powder Brows</h2>
+      <p class="service-desc">A gentle shading technique that creates a soft, filled-in look, lighter at the front and gradually deeper towards the tail. Ombré powder brows replicate the appearance of professionally applied brow makeup and suit all skin types, including oily and sensitive skin.</p>
+      <div class="service-price">$600 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-ombre" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-ombre" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. COMBINATION BROWS -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_7c4d6c9a26ff43e2952557c557a547fa~mv2.jpg" data-img="combination_brows" alt="Combination Brows Auckland — Allure Microblading">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Strokes + Shading</span>
+      <h2 class="service-name">Combination Brows</h2>
+      <p class="service-desc">The best of both techniques: realistic hair strokes at the front blended with soft powder shading through the body and tail, or gentle powder dusted between strokes for a more natural finish. Every combination is fully customised to your preference. This technique adds dimension and depth for a naturally full, polished result that suits most skin types and face shapes.</p>
+      <div class="service-price">$650 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-combination" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-combination" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. MEN'S EYEBROW TATTOOS -->
+  <div class="service-card">
+    <div class="service-img">
+      
+      <img src="https://static.wixstatic.com/media/7a2894_6449c1d9037243d8ad67e34614af5114~mv2.jpg" data-img="mens_eyebrow_tattoo" alt="Men's Eyebrow Tattoo Auckland — Allure Microblading">
+    </div>
+    <div class="service-info">
+      <span class="service-tag">Natural &amp; Masculine</span>
+      <h2 class="service-name">Men's Eyebrow Tattoos</h2>
+      <p class="service-desc">Designed specifically for men who want to restore fullness, fill gaps, or refine their natural brow shape. Not just for thinning brows, even if you have full brows but want sharper definition, a cleaner shape, or a boost in colour intensity, this treatment delivers. Using subtle, masculine shaping techniques, we create results that look completely natural and add confidence without anyone knowing it is a tattoo.</p>
+      <div class="service-price">$650 <small>first session</small></div>
+      <div class="touchup-badge">
+        <div class="touchup-icon">2</div>
+        <div class="touchup-text"><strong>Two-step process</strong> — touch-up at 4–6 weeks recommended for best results. <span class="touchup-price">$240</span></div>
+      </div>
+      <div class="service-links">
+        <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+        <a href="gallery.html#gallery-mens" class="btn-gallery">View Gallery</a>
+        <a href="pricing.html#price-mens" class="btn-gallery">View Pricing</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════ FULL PRICING TABLE ═══════════════ -->
+<section class="pricing-section">
+  <div class="pricing-header">
+    <h2>Eyebrow Pricing</h2>
+    <p>All prices are per session. Touch-up is recommended for best results.</p>
+  </div>
+
+  <table class="pricing-table">
+    <tr>
+      <td class="pt-service">Microblading Brows</td>
+      <td class="pt-detail">First session includes consultation, mapping, and application</td>
+      <td class="pt-price">$500</td>
+    </tr>
+    <tr>
+      <td class="pt-service">Ombré Powder Brows</td>
+      <td class="pt-detail">First session includes consultation, mapping, and application</td>
+      <td class="pt-price">$600</td>
+    </tr>
+    <tr>
+      <td class="pt-service">Combination Brows</td>
+      <td class="pt-detail">First session includes consultation, mapping, and application</td>
+      <td class="pt-price">$650</td>
+    </tr>
+    <tr>
+      <td class="pt-service">Nano Brows</td>
+      <td class="pt-detail">First session includes consultation, mapping, and application</td>
+      <td class="pt-price">$650</td>
+    </tr>
+    <tr>
+      <td class="pt-service">Men's Eyebrow Tattoos</td>
+      <td class="pt-detail">First session includes consultation, mapping, and application</td>
+      <td class="pt-price">$650</td>
+    </tr>
+    <tr>
+      <td class="pt-service">Initial Touch-Up</td>
+      <td class="pt-detail">Second session, required within 4–6 weeks after first session (our clients only)</td>
+      <td class="pt-price">$240</td>
+    </tr>
+    <tr>
+      <td class="pt-service">Extra Touch-Up</td>
+      <td class="pt-detail">If required, within 2 months after the initial touch-up</td>
+      <td class="pt-price">$100</td>
+    </tr>
+    <tr>
+      <td class="pt-service">12-Month Refresh</td>
+      <td class="pt-detail">For returning clients within 12 months of last session</td>
+      <td class="pt-price">$390</td>
+    </tr>
+    <tr>
+      <td class="pt-service">24-Month Refresh</td>
+      <td class="pt-detail">For returning clients within 24 months of last session</td>
+      <td class="pt-price">$490</td>
+    </tr>
+  </table>
+
+  <div class="pricing-note">
+    <p><strong>Please note:</strong> Cosmetic tattooing is a two-step process. A touch-up session is highly recommended 4–6 weeks after your first appointment for the best healed result. Clients with existing eyebrow tattoo from another clinic will be charged an additional $100 for cover-up or correction work. A non-refundable $50 deposit is required at booking and will be deducted from the final payment. We accept EFTPOS, Visa, Mastercard, in-store Afterpay, and cash.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <h2>Ready to Transform Your Brows?</h2>
+  <p>Book your appointment or view our full eyebrow gallery for inspiration.</p>
+  <div class="service-links" style="justify-content:center;">
+    <a href="/booking-agreement.html" class="btn-book">Book Now</a>
+    <a href="gallery.html#brows" class="btn-gallery">View Full Gallery</a>
+  </div>
+</section>
+
+<!-- ═══════════════ SEO SCHEMA ═══════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Eyebrow Cosmetic Tattoo",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Allure Microblading",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "40 St Benedicts Street, Eden Terrace",
+      "addressLocality": "Auckland",
+      "postalCode": "1010",
+      "addressCountry": "NZ"
+    },
+    "url": "https://m.alluremicroblading.co.nz"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Eyebrow Tattoo Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Microblading Brows",
+        "description": "Handcrafted feathered hair strokes for natural-looking brows",
+        "price": "500",
+        "priceCurrency": "NZD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Ombré Powder Brows",
+        "description": "Soft shading technique for a filled-in brow makeup look",
+        "price": "600",
+        "priceCurrency": "NZD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nano Brows",
+        "description": "Hyper-realistic machine hair strokes using single-point nano needle",
+        "price": "650",
+        "priceCurrency": "NZD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Combination Brows",
+        "description": "Hair strokes blended with powder shading for dimension and depth",
+        "price": "650",
+        "priceCurrency": "NZD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Men's Eyebrow Tattoos",
+        "description": "Natural, masculine brow shaping for men",
+        "price": "650",
+        "priceCurrency": "NZD"
+      }
+    ]
+  }
+}
+</script>
+
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
+  });
+
+    function toggleMobServices() {
+    var btn = document.getElementById('mobServicesToggle');
+    var sub = document.getElementById('mobSub');
+    btn.classList.toggle('open');
+    sub.classList.toggle('open');
+  }
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+</script>
+
+<script>
+  // Image loader — controlled via /images.json
+  (function() {
+    fetch('/images.json')
+      .then(function(r){ return r.json(); })
+      .then(function(imgs) {
+        document.querySelectorAll('img[data-img]').forEach(function(el) {
+          var key = el.getAttribute('data-img');
+          if (imgs[key]) el.src = imgs[key];
+        });
+      })
+      .catch(function(e){ console.warn('images.json not loaded', e); });
+  })();
+</script>
+</body>
+</html>
