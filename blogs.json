@@ -2,9 +2,21 @@
   "_instructions": "To add a new post: copy one of the post blocks below, paste it at the top of the 'posts' array, fill in the details, and create the matching HTML file in the /blog/ folder. The 'slug' must match the filename exactly (e.g. slug 'my-post' = /blog/my-post.html). Leave 'image' empty to show no image.",
 
   "posts": [
-      {
+    {
+      "slug": "microblading-vs-ombre-powder-brows",
+      "title": "Microblading vs Ombré Powder Brows: Which Is Right for You?",
+      "Publish Date": "2026-05-01",
+      "published": true,
+      "tag": "Brow Techniques",
+      "excerpt": "The most asked question at every consultation. The honest answer depends on your skin, your lifestyle, and the brows you want to wake up to. Here is how to decide between hair strokes, soft powder, or both.",
+      "image": "https://static.wixstatic.com/media/7a2894_3a06327d76b54bb2a0b47f2324704177~mv2.jpg",
+      "date": "May 2026"
+    },
+    {
       "slug": "microblading-vs-nano-brows",
       "title": "Microblading or Nano Brows: Which Suits You?",
+      "Publish Date": "2025-04-01",
+      "published": true,
       "tag": "Brow Techniques",
       "excerpt": "Two distinct techniques. One shared goal: brows that look effortlessly real. Understanding the difference helps you choose what is right for your skin, your lifestyle, and the result you are after.",
       "image": "https://static.wixstatic.com/media/7a2894_3b94f37a963344688a7b0984533432dd~mv2.png",

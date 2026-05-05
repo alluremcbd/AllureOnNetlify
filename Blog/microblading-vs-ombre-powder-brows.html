@@ -60,7 +60,7 @@
   }
   .back-link {
     font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
-    color: var(--gold-dark); display: inline-flex; align-items: center; gap: 6px;
+    color: var(--gold-dark); display: flex; align-items: center; gap: 6px; justify-content: flex-start; width: fit-content;
     margin-bottom: 32px; transition: gap .2s;
   }
   .back-link:hover { gap: 10px; }
@@ -137,7 +137,7 @@
     border-radius: 2px;
     overflow: hidden;
   }
-  .article-img img { width: 100%; height: 400px; object-fit: cover; }
+  .article-img img { width: 100%; height: auto; display: block; }
   .article-img figcaption {
     font-size: .7rem; color: var(--ink-light); letter-spacing: .06em;
     padding: 10px 0 0; text-align: center;
@@ -204,6 +204,18 @@
   .related-tag { font-size: .6rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; display: block; }
   .related-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 400; color: var(--ink); line-height: 1.3; }
 
+  /* TAGS */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+  .tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border: 1px solid var(--gold-border);
+    padding: 5px 12px;
+    font-weight: 400;
+  }
+
   /* NAV overrides for light page */
   .nav-voucher { color: var(--gold, #D4A96A) !important; }
   .mobile-menu { visibility: hidden !important; pointer-events: none !important; }
@@ -234,8 +246,8 @@
       <div class="dropdown-menu">
         <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
         <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
-        <a href="/lip.html" class="dropdown-item">Lip Blush Tattoos</a>
-        <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <a href="/lip.html" class="dropdown-item">Lip Blush Tattoo</a>
+        <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckles</a>
         <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
       </div>
     </div>
@@ -257,7 +269,7 @@
   <div class="mob-sub" id="mobSub">
     <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
     <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
-    <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoo</a>
     <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
     <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
   </div>
@@ -274,9 +286,9 @@
 <div class="article-wrap">
 
   <!-- HERO IMAGE -->
-  <div class="article-hero-img">
+  <!-- <div class="article-hero-img">
     <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1600&q=80" alt="Eyebrow tattoo close up">
-  </div>
+  </div> -->
 
   <!-- HEADER -->
   <div class="article-header">
@@ -284,7 +296,7 @@
     <span class="article-tag">Brow Techniques</span>
     <h1 class="article-title">Microblading vs Ombré Powder Brows — <em>Which Is Right for You?</em></h1>
     <div class="article-meta">
-      <span>March 2025</span>
+      <span>May 2025</span>
       <span>Allure Microblading, Auckland</span>
       <span>5 min read</span>
     </div>
@@ -299,10 +311,10 @@
 
     <h2>What Is Microblading?</h2>
     <p>Microblading is a manual hand technique where nano needles grouped like a blade are gently drawn through the skin to deposit pigment in fine, hair-like strokes. The result is a natural, feathered look that closely mimics the appearance of real brow hairs — precise, defined, and understated.</p>
-    <p>Microblading performs best on normal to dry skin. On skin with less oil production, the strokes remain crisp and defined as they heal. On oilier skin, pigment can spread slightly over time, softening the strokes and reducing definition.</p>
+    <p>Microblading performs best on normal to dry skin, ideally young, firm, and healthy skin with good elasticity. The strokes remain crisp and defined on skin with good firmness and consistent oil balance.</p>
 
     <div class="pull-quote">
-      <p>The goal of microblading is to make it look like you simply have better brows — not that you have had anything done at all.</p>
+      <p>The goal of microblading is naturally cleaner, tidier brows that still look and feel like yours. A defined shape that makes morning makeup faster and easier, without replacing it entirely.</p>
     </div>
 
     <h3>Microblading suits</h3>
@@ -314,13 +326,13 @@
     </ul>
 
     <figure class="article-img">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" alt="Close up beauty portrait">
+      <img src="https://static.wixstatic.com/media/7a2894_f64fd0b85ad4475cb1dae0e7c2655e48~mv2.jpg" alt="Close up beauty portrait">
       <figcaption>Natural definition — the hallmark of well-executed microblading</figcaption>
     </figure>
 
     <h2>What Are Ombré Powder Brows?</h2>
-    <p>Ombré powder brows use a digital machine to deposit pigment in a soft, stippled pattern. The front of the brow is kept lighter and more diffused, graduating to a deeper, more defined tail. The finished result resembles professionally applied brow powder or pomade — polished, consistent, and long-lasting.</p>
-    <p>Because the technique does not rely on fine individual strokes, ombré powder brows hold up beautifully across all skin types — including oily, combination, and sensitive skin. They also tend to last longer than microblading, typically 18 to 36 months before a refresh is needed.</p>
+    <p>Ombré powder brows are a shading technique that uses a digital machine to deposit pigment in a soft, stippled pattern. The front of the brow is kept lighter and more diffused, graduating to a deeper, more defined tail. The finished result resembles professionally applied brow powder or pomade: polished, consistent, and long-lasting.</p>
+    <p>Because the technique does not rely on fine individual strokes, ombré powder brows hold up beautifully across all skin types, including oily, combination, and sensitive skin. They heal tinted and polished, similar to a well-applied brow product that never smudges through the day. They also tend to last longer than microblading, typically 18 to 36 months before a refresh is needed.</p>
 
     <h3>Ombré Powder Brows suit</h3>
     <ul>
@@ -330,6 +342,10 @@
       <li>Those looking for greater longevity between appointments</li>
     </ul>
 
+    <figure class="article-img">
+      <img src="https://static.wixstatic.com/media/7a2894_df2608ae838c4f51b4f1ae37a0b51b81~mv2.jpg" alt="Close up beauty portrait">
+      <figcaption>Ombré powder brows: a crisp, makeup-ready finish that wakes up with you</figcaption>
+    </figure>
     <hr class="article-divider">
 
     <h2>A Quick Comparison</h2>
@@ -351,8 +367,8 @@
     </table>
 
     <h2>Which One Is Right for You?</h2>
-    <p>The right technique depends on your skin, your aesthetic goals, and what you want your brows to look like on a Tuesday morning with no makeup on. During your design consultation at Allure Microblading, Jessica will assess your skin type, discuss your lifestyle, and recommend the most suitable technique — or a combination of both.</p>
-    <p>Combination brows, which blend hair strokes at the front with soft powder shading through the body and tail, are an excellent option for those who want the best of both: a natural hairline with polished depth. Every treatment is customised to your face shape, skin tone, and personal preference.</p>
+    <p>The right technique depends on your skin, your aesthetic goals, and what you want your brows to look like on a Tuesday morning with no makeup on. Think about your lifestyle. If you wear makeup daily and want a polished, ready-to-go result from the moment you wake up, ombré powder brows are likely your answer. If you prefer a natural base you can build on when you want to, microblading gives you that.</p>
+    <p>And if you genuinely cannot decide, combination brows are the most popular choice for a reason. They work in every situation and suit almost everyone. The combination can be tailored too: softer shading between strokes for a natural finish, or a defined stroke front with a shaded body and tail for something more dramatic. Jessica will guide you through all of this on the day.</p>
 
     <div class="article-cta">
       <h3>Not sure which technique is right for you?</h3>
@@ -360,34 +376,15 @@
       <a href="/booking-agreement.html" class="btn-gold" target="_blank" rel="noopener">Book a Consultation</a>
     </div>
 
-  </div>
-
-  <!-- RELATED ARTICLES -->
-  <div class="related-section">
-    <span class="related-label">Continue Reading</span>
-    <div class="related-grid">
-      <a href="/blog/nano-brows-vs-microblading.html" class="related-item">
-        <div class="related-thumb">
-          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80" alt="Nano Brows">
-        </div>
-        <span class="related-tag">Nano Brows</span>
-        <div class="related-title">What Are Nano Brows — and Are They Better Than Microblading?</div>
-      </a>
-      <a href="/blog/cosmetic-tattoo-aftercare.html" class="related-item">
-        <div class="related-thumb">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Aftercare">
-        </div>
-        <span class="related-tag">Aftercare</span>
-        <div class="related-title">Cosmetic Tattoo Aftercare — The First Two Weeks</div>
-      </a>
-      <a href="/blog/lip-blush-tattoo-guide.html" class="related-item">
-        <div class="related-thumb">
-          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Lip Blush">
-        </div>
-        <span class="related-tag">Lip Blush</span>
-        <div class="related-title">Lip Blush Tattoo — Everything You Need to Know Before Booking</div>
-      </a>
+    <div class="tags">
+      <span class="tag">Microblading Auckland</span>
+      <span class="tag">Ombré Powder Brows Auckland</span>
+      <span class="tag">Combination Brows</span>
+      <span class="tag">Cosmetic tattoo NZ</span>
+      <span class="tag">Eyebrow tattoo</span>
+      <span class="tag">Brow tattoo Auckland</span>
     </div>
+
   </div>
 
 </div>

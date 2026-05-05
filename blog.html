@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Favicons (PUT HERE) -->
@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="/images/favicon.ico">  
 
 <title>Blog | Allure Microblading Auckland — Cosmetic Tattoo Insights</title>
-<meta name="description" content="Expert insights on microblading, ombré brows, nano brows, lip blush tattoos and cosmetic tattoo aftercare from Allure Microblading Auckland. Est. 2016.">
+<meta name="description" content="Expert insights on microblading, ombré brows, nano brows, Lip Blush Tattoo and cosmetic tattoo aftercare from Allure Microblading Auckland. Est. 2016.">
 <link rel="canonical" href="https://alluremicroblading.co.nz/blog">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,8 +94,8 @@
       <div class="dropdown-menu">
         <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
         <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
-        <a href="/lip.html" class="dropdown-item">Lip Blush Tattoos</a>
-        <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckle Tattoos</a>
+        <a href="/lip.html" class="dropdown-item">Lip Blush Tattoo</a>
+        <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckles</a>
         <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
       </div>
     </div>
@@ -117,7 +117,7 @@
   <div class="mob-sub" id="mobSub">
     <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
     <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
-    <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoos</a>
+    <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoo</a>
     <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
     <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
   </div>
@@ -156,7 +156,9 @@
     .then(function(data) {
       var list = document.getElementById('postList');
       list.innerHTML = '';
-      data.posts.forEach(function(post) {
+      data.posts
+      .filter(post => post.published !== false)
+      .forEach(function(post) {
         var a = document.createElement('a');
         a.href = '/blog/' + post.slug + '.html';
         a.className = 'post-item';
