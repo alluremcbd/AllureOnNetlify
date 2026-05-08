@@ -140,7 +140,30 @@
 <div class="blog-section">
   <div class="section-divider"><h2>Latest Articles</h2></div>
   <div class="post-list" id="postList">
-    <div class="loading">Loading articles...</div>
+  <!-- POSTS:START -->
+
+    <a href="/blog/microblading-vs-ombre-powder-brows.html" class="post-item">
+      <div class="post-thumb"><img src="https://static.wixstatic.com/media/7a2894_3a06327d76b54bb2a0b47f2324704177~mv2.jpg" alt="Microblading vs Ombré Powder Brows: Which Is Right for You?" loading="lazy"></div>
+      <div class="post-info">
+        <span class="post-tag">Brow Techniques</span>
+        <div class="post-title">Microblading vs Ombré Powder Brows: Which Is Right for You?</div>
+        <p class="post-excerpt">The most asked question at every consultation. The honest answer depends on your skin, your lifestyle, and the brows you want to wake up to. Here is how to decide between hair strokes, soft powder, or both.</p>
+        <span class="post-date">May 2026</span>
+      </div>
+      <span class="post-arrow">&#8594;</span>
+    </a>
+
+    <a href="/blog/microblading-vs-nano-brows.html" class="post-item">
+      <div class="post-thumb"><img src="https://static.wixstatic.com/media/7a2894_3b94f37a963344688a7b0984533432dd~mv2.png" alt="Microblading or Nano Brows: Which Suits You?" loading="lazy"></div>
+      <div class="post-info">
+        <span class="post-tag">Brow Techniques</span>
+        <div class="post-title">Microblading or Nano Brows: Which Suits You?</div>
+        <p class="post-excerpt">Two distinct techniques. One shared goal: brows that look effortlessly real. Understanding the difference helps you choose what is right for your skin, your lifestyle, and the result you are after.</p>
+        <span class="post-date">April 2025</span>
+      </div>
+      <span class="post-arrow">&#8594;</span>
+    </a>
+  <!-- POSTS:END -->
   </div>
 </div>
 
@@ -149,37 +172,6 @@
   <p>Serving Auckland clients from our studio in Eden Terrace since 2016.</p>
   <a href="/booking-agreement.html" class="btn-gold">Book Online</a>
 </div>
-
-<script>
-  fetch('/blogs.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      var list = document.getElementById('postList');
-      list.innerHTML = '';
-      data.posts
-      .filter(post => post.published !== false)
-      .forEach(function(post) {
-        var a = document.createElement('a');
-        a.href = '/blog/' + post.slug + '.html';
-        a.className = 'post-item';
-        a.innerHTML =
-          '<div class="post-thumb">' +
-            (post.image ? '<img src="' + post.image + '" alt="' + post.title + '" loading="lazy">' : '') +
-          '</div>' +
-          '<div class="post-info">' +
-            '<span class="post-tag">' + post.tag + '</span>' +
-            '<div class="post-title">' + post.title + '</div>' +
-            '<p class="post-excerpt">' + post.excerpt + '</p>' +
-            '<span class="post-date">' + post.date + '</span>' +
-          '</div>' +
-          '<span class="post-arrow">&#8594;</span>';
-        list.appendChild(a);
-      });
-    })
-    .catch(function() {
-      document.getElementById('postList').innerHTML = '<div class="loading">Articles coming soon.</div>';
-    });
-</script>
 
 <script>
   const nav = document.getElementById("nav");
