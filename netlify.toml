@@ -26,6 +26,11 @@
   status = 301
 
 [[redirects]]
+  from = "/nanobrows"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
   from = "/service-page/microblading-eyebrow-first-session"
   to = "/eyebrow.html"
   status = 301
