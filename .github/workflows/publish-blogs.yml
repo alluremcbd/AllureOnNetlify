@@ -1,5 +1,4 @@
 name: Publish Scheduled Blog Posts
-
 on:
   schedule:
     # Runs at 9:00 AM NZT on the 1st of every month
@@ -7,30 +6,26 @@ on:
     - cron: '0 21 1 * *'
   workflow_dispatch:
     # Allows you to trigger this manually from the Actions tab anytime
-
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write  # needed to commit changes back to repo
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Publish due blog posts
         run: node .github/scripts/publish-blogs.js
-
-      - name: Commit and push if blogs.json changed
+      - name: Regenerate blog.html post list
+        run: node .github/scripts/generate-blog-html.js
+      - name: Commit and push if anything changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blogs.json
+          git add blogs.json blog.html
           git diff --staged --quiet || git commit -m "chore: publish scheduled blog posts [$(date +'%Y-%m-%d')]"
           git push
