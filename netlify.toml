@@ -1,4 +1,96 @@
+# Old Wix pages — redirect to nearest equivalent on the new site
+
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/treatment"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/copy-of-treatment"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/microblading-brows"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/microshading-brows"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/malebrows"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/service-page/microblading-eyebrow-first-session"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/service-page/microblading-eyebrow-first-procedure"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
+  from = "/service-page/lash-enhancement-1st-procedure"
+  to = "/eyeliner.html"
+  status = 301
+
+[[redirects]]
+  from = "/service-page/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/menus"
+  to = "/pricing.html"
+  status = 301
+
+[[redirects]]
+  from = "/copy-of-price-menu"
+  to = "/pricing.html"
+  status = 301
+
+[[redirects]]
+  from = "/beauty-spots"
+  to = "/face.html"
+  status = 301
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 301
+
+[[redirects]]
+  from = "/tandcs"
+  to = "/tandcs.html"
+  status = 301
+
+[[redirects]]
+  from = "/copy-of-promotion"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/promotion"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shop"
+  to = "https://alluremcbd.wixsite.com/alluremicroblading/gift-card"
+  status = 301
