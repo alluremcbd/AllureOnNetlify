@@ -2,6 +2,16 @@
   "_instructions": "To add a new post: copy one of the post blocks below, paste it at the top of the 'posts' array, fill in the details, and create the matching HTML file in the /blog/ folder. The 'slug' must match the filename exactly (e.g. slug 'my-post' = /blog/my-post.html). Leave 'image' empty to show no image.",
 
   "posts": [
+      {
+      "slug": "ombre-lip-blush",
+      "title": "Ombré Lip Blush: The Defined Gradient Pout",
+      "Publish Date": "2026-06-01",
+      "published": false,
+      "tag": "Lip Techniques",
+      "excerpt": "The permanent version of overlined lips with a soft fill. A defined gradient border, a softer centre, and the structure of a perfectly drawn lip pencil without redrawing it every morning. From muted Pillow Talk nudes to healthy bright tones, with matte or glossy finish.",
+      "image": "https://static.wixstatic.com/media/7a2894_f7273b3136b243608ee6bb798dd315d6~mv2.png",
+      "date": "June 2026"
+    },
     {
       "slug": "microblading-vs-ombre-powder-brows",
       "title": "Microblading vs Ombré Powder Brows: Which Is Right for You?",
@@ -15,12 +25,12 @@
     {
       "slug": "microblading-vs-nano-brows",
       "title": "Microblading or Nano Brows: Which Suits You?",
-      "Publish Date": "2025-04-01",
+      "Publish Date": "2026-04-01",
       "published": true,
       "tag": "Brow Techniques",
       "excerpt": "Two distinct techniques. One shared goal: brows that look effortlessly real. Understanding the difference helps you choose what is right for your skin, your lifestyle, and the result you are after.",
       "image": "https://static.wixstatic.com/media/7a2894_3b94f37a963344688a7b0984533432dd~mv2.png",
-      "date": "April 2025"
+      "date": "April 2026"
     }
   ]
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ombré Lip Blush Auckland: Defined Gradient, Bold Border | Allure Microblading</title>
-  <meta name="description" content="Ombré lip blush creates a rich, defined border that fades to a softer centre. No harsh line, just dimension. The style for clients who love a sculpted pout. Allure Microblading, Auckland.">
+  <meta name="description" content="Ombré lip blush is the permanent version of overlined Pillow Talk lips, lip stain, and lined-with-soft-fill looks. Defined border, fuller-looking shape, muted nudes or healthy brights, matte or glossy. Allure Microblading, Auckland.">
   <link rel="canonical" href="https://alluremicroblading.co.nz/blog/ombre-lip-blush.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     "@type": "BlogPosting",
     "@id": "https://alluremicroblading.co.nz/blog/ombre-lip-blush.html",
     "headline": "Ombré Lip Blush: Defined Gradient, Bold Border",
-    "description": "Ombré lip blush creates a rich, defined border that fades softly inward. No harsh line, just dimension and sculpted shape.",
+    "description": "Ombré lip blush is the permanent version of lined lips with a soft fill. Defined border, fuller-looking shape, no daily liner.",
     "author": { "@type": "Person", "name": "Jessica", "url": "https://alluremicroblading.co.nz/about" },
     "publisher": {
       "@type": "LocalBusiness", "name": "Allure Microblading",
@@ -25,9 +25,9 @@
       "logo": { "@type": "ImageObject", "url": "https://alluremicroblading.co.nz/logo.png" }
     },
     "datePublished": "2025-05-01",
-    "dateModified": "2025-05-01",
+    "dateModified": "2026-05-07",
     "mainEntityOfPage": "https://alluremicroblading.co.nz/blog/ombre-lip-blush.html",
-    "keywords": "ombre lip blush Auckland, ombre lip tattoo Auckland, defined lip border tattoo, cosmetic tattoo lips Auckland"
+    "keywords": "ombre lip blush Auckland, ombre lip tattoo Auckland, defined lip border tattoo, permanent lip liner Auckland, lip liner tattoo Auckland, lip stain tattoo Auckland, Pillow Talk lips permanent, overlined lips tattoo, lip definition tattoo, fuller lips without filler, rosy nude lip blush, cosmetic tattoo lips Auckland"
   }
   </script>
 
@@ -161,6 +161,10 @@
 
     /* IMAGE */
     .article-img { margin: 52px 0; }
+    .article-img img {
+      width: 100%; height: auto; display: block;
+      border-radius: 2px;
+    }
     .img-slot {
       width: 100%; aspect-ratio: 16/9;
       background: var(--cream-mid);
@@ -180,6 +184,65 @@
       text-transform: uppercase; color: var(--cream-muted);
       margin-top: 12px; text-align: center;
     }
+
+    /* PORTRAIT (taller, vertical client photo) */
+    .article-img.portrait img {
+      max-height: 760px; object-fit: cover;
+      object-position: center 30%;
+      width: 100%;
+    }
+
+    /* PROGRESSION (3-panel, wider aspect) */
+    .article-img.progression img {
+      width: 100%;
+    }
+
+    /* PRODUCT REFERENCE BOX (magazine-style sidebar) */
+    .product-ref {
+      background: var(--cream-mid);
+      border-left: 2px solid var(--gold);
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .product-ref .ref-label {
+      font-size: 0.68rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      font-weight: 500; margin-bottom: 10px;
+    }
+    .product-ref h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 500;
+      color: var(--ink); margin: 0 0 8px;
+      line-height: 1.3;
+    }
+    .product-ref p {
+      font-size: 0.92rem !important;
+      color: var(--ink-soft);
+      margin: 0 !important;
+      line-height: 1.7 !important;
+    }
+    .product-ref .ref-list {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+    }
+    .product-ref .ref-list-label {
+      font-size: 0.65rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--cream-muted);
+      margin-bottom: 8px;
+    }
+    .product-ref .ref-list span {
+      display: inline-block;
+      font-size: 0.85rem; color: var(--ink-soft);
+      padding: 2px 0;
+      margin-right: 12px;
+    }
+    .product-ref .ref-list span::after {
+      content: ' ·';
+      color: var(--gold-pale);
+      margin-left: 8px;
+    }
+    .product-ref .ref-list span:last-child::after { content: ''; }
 
     /* STYLE CARDS */
     .style-cards {
@@ -211,6 +274,11 @@
     .swatch span {
       font-size: 0.7rem; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--cream-muted); text-align: center;
+    }
+    .colour-group-label {
+      font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      margin: 28px 0 4px; font-weight: 500;
     }
 
     /* DIVIDER */
@@ -277,38 +345,24 @@
     .back-link:hover { color: var(--ink); }
     .back-link::before { content: '←'; font-size: 0.9rem; }
 
+    /* TAGS */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 56px auto 0; max-width: 780px; padding: 0 clamp(20px,5vw,40px); }
+    .tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-light, #8A837C);
+      border: 1px solid var(--gold-border, rgba(154,125,90,0.2));
+      padding: 5px 12px;
+      font-weight: 400;
+    }
+
     @media (max-width: 600px) {
       .article-wrap { padding: 44px 20px 60px; }
       .article-cta { margin: 60px -20px -60px; padding: 48px 20px; }
     }
-  
-  /* TAGS */
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 56px auto 0; max-width: 780px; padding: 0 clamp(20px,5vw,40px); }
-  .tag {
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-light, #8A837C);
-    border: 1px solid var(--gold-border, rgba(154,125,90,0.2));
-    padding: 5px 12px;
-    font-weight: 400;
-  }
+  </style>
 
-    /* HERO OVERRIDE: text-only band, no image */
-    .article-hero {
-      height: auto !important;
-      min-height: 0 !important;
-      overflow: visible !important;
-      padding: 0 !important;
-    }
-    .article-hero img { display: none !important; }
-    .article-hero .hero-overlay {
-      position: static !important;
-      inset: auto !important;
-      background: var(--ink) !important;
-      padding: clamp(80px, 14vw, 140px) 24px clamp(60px, 10vw, 100px) !important;
-    }
-</style>
 </head>
 <body>
 
@@ -360,17 +414,23 @@
   <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
 </div>
 
+<!-- HERO -->
 <header class="article-hero">
+  <img
+    src="https://static.wixstatic.com/media/7a2894_566a9fbbb46e4eb1bd94f296308587d8~mv2.png"
+    alt="Client with completed ombré lip blush, defined gradient, warm nude tone, Allure Microblading Auckland"
+    loading="eager"
+  >
   <div class="hero-overlay">
     <p class="hero-kicker">Lip Blush · Ombré Style Guide</p>
     <h1 class="hero-title">Ombré Lip Blush: The Defined Gradient Pout</h1>
-    <p class="hero-meta"><span>By Jessica</span><span>·</span><span>Allure Microblading, Auckland</span></p>
+    <p class="hero-meta"><span class="meta-left">June 2026</span><span class="meta-right"><span>By Jessica</span><span>Allure Microblading, Auckland</span></span></p>
   </div>
 </header>
 
 <div class="article-wrap">
 
-  <a href="/blog.html" class="back-link">All Articles</a>
+<a href="/blog.html" class="back-link">All Articles</a>
 
   <p class="article-intro">
     If you have ever lined your lips in brown or mauve, blended it inward, and thought that was the best your lips had ever looked, ombré lip blush is the permanent version of that.
@@ -395,28 +455,60 @@
       </div>
     </div>
 
-    <!-- IMAGE 1: paste ChatGPT image URL into src below -->
-    <figure class="article-img">
-      <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=1400&q=80" alt="Ombré lips, defined border, warm brown tone, close-up" loading="lazy" style="width:100%;height:auto;display:block;border-radius:2px;">
-      <figcaption>Deep at the border, soft at the centre. The gradient settles at around six weeks.</figcaption>
+    <!-- IMAGE 1: 3-panel progression -->
+    <figure class="article-img progression">
+      <img
+        src="https://static.wixstatic.com/media/7a2894_791236d76be54622a07109fb87b4861c~mv2.jpg"
+        alt="Ombré lip blush progression: before, immediately after with gloss, healed result"
+        loading="lazy"
+      >
+      <figcaption>Before, immediately after, settled. The gradient softens beautifully through healing.</figcaption>
     </figure>
+
+    <h2>The Lip Liner Look, Made Permanent</h2>
+    <p>If you spend any time on TikTok or Instagram, you have already seen the look this style is built around. A nude lip pencil, often a warm brown or muted mauve, drawn just slightly outside the natural lip line. A nude or muted lipstick patted into the centre. Either a soft matte finish for a clean, sculpted look, or a layer of gloss on top for that glassy, lived-in pout. Charlotte Tilbury Pillow Talk became the global benchmark for this rosy nude territory and arguably started the modern wave. From there it moved through Maybelline Spice, MAC Whirl, NARS Dolce Vita, and the YSL Tatouage range. The look started in European editorial makeup, moved through fashion houses in Paris and Milan, and is now standard across Asian beauty content too.</p>
+    <p>Ombré lip blush is the tattooed version of that exact look. Jessica places the deeper pigment along the outer border, blurs it inward, and leaves the centre softer. From that point on, you can wear the look bare, or layer a tinted balm, lipstick, or gloss over the top depending on the day. The structure is already there.</p>
+
+    <div class="product-ref">
+      <div class="ref-label">Reference Look</div>
+      <h4>The Pillow Talk Effect, Permanently</h4>
+      <p>Charlotte Tilbury Pillow Talk built an entire category around the rosy nude with a slightly defined edge. Ombré lip blush gives you that exact base every morning, with no daily reapplication and no liner. Layer your favourite tint or gloss over the top when you want more.</p>
+      <div class="ref-list">
+        <div class="ref-list-label">Other Shades in the Same Family</div>
+        <span>Charlotte Tilbury Pillow Talk</span>
+        <span>MAC Whirl</span>
+        <span>NARS Dolce Vita</span>
+        <span>Maybelline Spice</span>
+        <span>YSL Tatouage Couture</span>
+      </div>
+    </div>
+
+    <p>It is also the style that suits clients who have had lip filler. Filler adds volume, but volume on its own does not give a lip its shape. Without a defined border, even fuller lips can read soft and undefined. Ombré supplies the structure that filler does not, which is why this combination has become so popular.</p>
+
+    <h2>Lip Stain, but it Never Washes Off</h2>
+    <p>Another search that brings clients to this style is the lip stain look. The viral version: a deep berry, rose, or brown stain pressed onto the lip line and around the edges, then blotted or peeled, leaving lips that look kissed-from-within and naturally bordered. Brands like Peripera Ink Velvet, Rom&nd Juicy Lasting Tint, and the Sephora Cream Lip Stain built whole product categories around this finish.</p>
+    <p>The reason ombré lip blush keeps coming up next to lip stain searches is because it produces the same result, with two differences. It does not transfer onto cups or shirts. And it does not wash off when the day ends.</p>
+
+    <div class="pull-quote">
+      <p>The work is in the gradient. A defined edge that does not look drawn. A soft centre that does not look blank. The two have to meet in the middle without anyone seeing the join.</p>
+    </div>
 
     <h2>Who It Works Best For</h2>
     <p>Ombré suits clients who want their lips to look intentional without wearing obvious colour every day.</p>
     <ul>
       <li>Thin or flat lips that need visible structure and shape</li>
       <li>Daily lip liner wearers who want to simplify their routine</li>
+      <li>Clients with lip filler who want definition to match the volume</li>
       <li>Those who prefer a more defined, editorial look over soft and natural</li>
       <li>Anyone wanting fuller-looking lips without filler</li>
     </ul>
     <p>A small amount of pigment placed just outside the natural lip border, carefully blurred into the surrounding skin, can also create a slightly more generous shape without looking overdone.</p>
 
-    <div class="pull-quote">
-      <p>When the lip edge is defined, the whole face looks more put-together, even with no other makeup on.</p>
-    </div>
-
     <h2>Colour</h2>
-    <p>The colours best suited to ombré are the same ones that work as lip liner: warm browns, dusty mauves, nude-roses, and brick tones. Pigment always heals softer than it appears on the day, so a shade that looks deep at the appointment often settles into something closer to a well-tinted nude.</p>
+    <p>The shades that work most beautifully with this technique fall into two camps. Both are popular, both work, and the right choice comes down to what you actually want to wear on your face every day.</p>
+
+    <div class="colour-group-label">The Muted Palette</div>
+    <p>Warm browns, dusty mauves, nude-roses, and brick tones. This is the classic ombré territory and the one most associated with the lip liner look that has been trending across Europe and Asia. Muted shades photograph beautifully, layer easily under any lipstick or gloss, and read as polished without ever looking loud. They suit clients who want their lips defined but understated.</p>
 
     <div class="colour-row">
       <div class="swatch"><div class="swatch-dot" style="background:#8B6355;"></div><span>Tawny<br>Brown</span></div>
@@ -426,19 +518,54 @@
       <div class="swatch"><div class="swatch-dot" style="background:#B89090;"></div><span>Muted<br>Berry</span></div>
     </div>
 
+    <div class="colour-group-label">The Healthy Bright Palette</div>
+    <p>Not everyone wants muted lips, and they do not have to. Soft watermelon reds, warm peach, healthy pink, fresh coral, or a clean rose all work just as well with the ombré technique. Think Dior Lip Glow Oil in Rosewood, Rare Beauty Soft Pinch in Joy, or the watermelon stain effect made viral by Glossier Generation G in Like and Peripera Ink Tints. The result is lips that look naturally well-coloured, like a flush from the cold or a tinted balm worn down through the day. Pigment always heals softer than it appears on the day, so even brighter shades settle into something wearable.</p>
+
+    <div class="colour-row">
+      <div class="swatch"><div class="swatch-dot" style="background:#D26A6A;"></div><span>Watermelon<br>Red</span></div>
+      <div class="swatch"><div class="swatch-dot" style="background:#E08570;"></div><span>Warm<br>Peach</span></div>
+      <div class="swatch"><div class="swatch-dot" style="background:#D88080;"></div><span>Healthy<br>Pink</span></div>
+      <div class="swatch"><div class="swatch-dot" style="background:#D5705C;"></div><span>Fresh<br>Coral</span></div>
+      <div class="swatch"><div class="swatch-dot" style="background:#C66B6B;"></div><span>Clean<br>Rose</span></div>
+    </div>
+
+    <div class="product-ref">
+      <div class="ref-label">Reference Looks</div>
+      <h4>The Healthy Tint Family</h4>
+      <p>For clients who want their lips to look genuinely alive rather than understated. The shades that anchor this palette show up across the most-searched lip products of the year.</p>
+      <div class="ref-list">
+        <div class="ref-list-label">Visual References</div>
+        <span>Dior Lip Glow Oil</span>
+        <span>Rare Beauty Soft Pinch</span>
+        <span>Glossier Generation G</span>
+        <span>Peripera Ink Tints</span>
+        <span>Tower 28 JuiceBalm</span>
+      </div>
+    </div>
+
+    <p>For clients drawn to either a cool or warm undertone, both are achievable. Cool tones tend to brighten the face and complement pinker complexions. Warm tones add a healthy glow and suit golden or olive skin. Jessica selects and custom-mixes pigment based on natural lip colour, undertone, and the finished look you are after.</p>
+
+    <h2>Matte, Glossy, or Both</h2>
+    <p>A common question is whether the tattoo locks you into one finish forever. It does not. Lip blush heals as a soft satin tone, sitting somewhere between matte and shine. From there, the day-to-day finish is yours to decide. A clear gloss layered over the top creates the glassy, plumped look that has dominated this year. A nude or tinted lipstick over the centre adds colour without losing the underlying structure. Or wear nothing at all and let the tattooed gradient do the work.</p>
+    <p>Muted ombré with a glossy top layer is one of the most-requested looks across beauty content right now, and it is exactly what this technique delivers as a baseline.</p>
+
     <div class="ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line"></div></div>
 
     <h2>Healing</h2>
     <p>Lips will look darker and more saturated in the first few days. The colour softens as skin sheds around days four to seven. By weeks four to six the gradient settles into its true form. The touch-up at six to eight weeks is where the final balance is refined.</p>
 
-    <!-- IMAGE 2: paste ChatGPT image URL into src below -->
-    <figure class="article-img">
-      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1400&q=80" alt="Settled ombré result, natural light, warm skin tone" loading="lazy" style="width:100%;height:auto;display:block;border-radius:2px;">
-      <figcaption>Warmer, softer, and more diffused than the day of the procedure.</figcaption>
+    <!-- IMAGE 2: client portrait -->
+    <figure class="article-img portrait">
+      <img
+        src="https://static.wixstatic.com/media/7a2894_afa5ba3ab5c046ec81867a25b3225a85~mv2.jpg"
+        alt="Allure client with healed ombré lip blush, defined gradient in warm nude"
+        loading="lazy"
+      >
+      <figcaption>The settled result. Defined enough to read intentional. Soft enough to look like skin.</figcaption>
     </figure>
 
     <h2>Prefer Something Softer?</h2>
-    <p>If you prefer colour at the centre with a blurred border and a more youthful, natural finish, soft gradient lip blush may suit you better.</p>
+    <p>If you prefer colour at the centre with a blurred border and a more youthful, natural finish, soft gradient lip blush may suit you better. This style is also known as cloud lips or blurred lips in current beauty trends.</p>
 
     <a href="/blog/korean-lip-blush.html" class="crosslink">
       <div class="crosslink-icon">💋</div>
@@ -449,7 +576,7 @@
     </a>
 
     <h2>Pricing</h2>
-    <p>Ombré lip blush is available as part of the Lip Blush service at Allure Microblading, priced at $650. This includes the initial appointment and a touch-up session six to eight weeks later.</p>
+    <p>Ombré lip blush is available as part of the Lip Blush service at Allure Microblading. The first session is $650, and the touch-up six to eight weeks later is $350. The touch-up is where the gradient and colour are refined into their final form, and is included as a separate booking within two months of the initial appointment.</p>
 
   </div>
 
@@ -462,14 +589,13 @@
       <span class="tag">Gradient Lip Tattoo</span>
     </div>
 
-
-
-    <div class="article-cta">
+  <div class="article-cta">
     <p class="cta-label">Book at Allure Microblading</p>
     <h2>The Ombré Pout, Made Permanent</h2>
     <p>Eden Terrace, Auckland. Consultations included with every appointment.</p>
-    <a href="/booking-agreement.html" class="cta-btn" target="_blank" rel="noopener">Book Online</a>
+    <a href="https://m.alluremicroblading.co.nz" class="cta-btn" target="_blank" rel="noopener">Book Now</a>
   </div>
+
 </div>
 
 <script>
@@ -492,5 +618,6 @@
     document.body.style.overflow = "";
   }
 </script>
+
 </body>
 </html>
