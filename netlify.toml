@@ -31,6 +31,11 @@
   status = 301
 
 [[redirects]]
+  from = "/hair-strokes"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
   from = "/service-page/microblading-eyebrow-first-session"
   to = "/eyebrow.html"
   status = 301
@@ -41,8 +46,33 @@
   status = 301
 
 [[redirects]]
+  from = "/service-page/powder-shading-eyebrow-first-session"
+  to = "/eyebrow.html"
+  status = 301
+
+[[redirects]]
   from = "/service-page/lash-enhancement-1st-procedure"
   to = "/eyeliner.html"
+  status = 301
+
+[[redirects]]
+  from = "/service-page/upper-eyeliner-first-session"
+  to = "/eyeliner.html"
+  status = 301
+
+[[redirects]]
+  from = "/lashes"
+  to = "/eyeliner.html"
+  status = 301
+
+[[redirects]]
+  from = "/service-page/full-lips-first-session"
+  to = "/lip.html"
+  status = 301
+
+[[redirects]]
+  from = "/lips"
+  to = "/lip.html"
   status = 301
 
 [[redirects]]
@@ -52,6 +82,11 @@
 
 [[redirects]]
   from = "/menus"
+  to = "/pricing.html"
+  status = 301
+
+[[redirects]]
+  from = "/menus?menu=price-menu"
   to = "/pricing.html"
   status = 301
 
@@ -82,6 +117,16 @@
 
 [[redirects]]
   from = "/tandcs"
+  to = "/tandcs.html"
+  status = 301
+
+[[redirects]]
+  from = "/copy-of-terms-conditions"
+  to = "/tandcs.html"
+  status = 301
+
+[[redirects]]
+  from = "/website-terms-of-use"
   to = "/tandcs.html"
   status = 301
 
