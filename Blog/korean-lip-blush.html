@@ -157,6 +157,16 @@
 
     /* IMAGE */
     .article-img { margin: 52px 0; }
+    .article-img img {
+      width: 100%; height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+    .article-img.compact img {
+      max-height: 600px;
+      object-fit: cover;
+      object-position: center;
+    }
     .img-slot {
       width: 100%; aspect-ratio: 16/9;
       background: var(--cream-mid);
@@ -298,59 +308,58 @@
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">Allure Microblading</a>
-    <div class="nav-links">
-      <div class="nav-dropdown">
-        <a href="/services" class="nav-link">Services</a>
-        <div class="nav-dropdown-menu">
-          <a href="/eyebrow.html">Eyebrow Tattoo</a>
-          <a href="/eyeliner.html">Eyeliner Tattoo</a>
-          <a href="/lip.html">Lip Blush Tattoo</a>
-          <a href="/face.html">Face Tattoo</a>
-          <a href="/pmu-removal.html">PMU Removal</a>
-        </div>
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/7a2894_1db7496d25fe403398f6ca14b165b183~mv2.png" alt="Allure Microblading" width="36" height="36">
+  </a>
+  <div class="nav-links">
+    <a href="/index.html" class="nav-link">Home</a>
+    <div class="dropdown">
+      <div class="nav-link dropdown-toggle">Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></div>
+      <div class="dropdown-menu">
+        <a href="/eyebrow.html" class="dropdown-item">Eyebrow Tattoo</a>
+        <a href="/eyeliner.html" class="dropdown-item">Eyeliner &amp; Lash Enhancement</a>
+        <a href="/lip.html" class="dropdown-item">Lip Blush Tattoo</a>
+        <a href="/face.html" class="dropdown-item">Beauty Marks &amp; Freckles</a>
+        <a href="/pmu-removal.html" class="dropdown-item">Non-Laser Tattoo Removal</a>
       </div>
-      <a href="/pricing.html" class="nav-link">Pricing</a>
-      <a href="/gallery.html" class="nav-link">Gallery</a>
-      <a href="/about.html" class="nav-link">About</a>
-      <a href="/faq.html" class="nav-link">FAQ</a>
-      <a href="/blog.html" class="nav-link nav-link--active">Blog</a>
-      <a href="/contact.html" class="nav-link">Contact</a>
-      <a href="https://m.alluremicroblading.co.nz" class="nav-btn" target="_blank" rel="noopener">Book Now</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="/pricing.html" class="nav-link">Pricing</a>
+    <a href="/gallery.html" class="nav-link">Gallery</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/faq.html" class="nav-link">FAQ</a>
+    <a href="/blog.html" class="nav-link active">Blog</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
+    <a href="https://alluremcbd.wixsite.com/alluremicroblading/gift-card" class="nav-link nav-voucher" target="_blank" rel="noopener">Gift Voucher</a>
+    <a href="/booking-agreement.html" class="nav-link">Book Online</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu" type="button"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mob-close" id="mobClose" aria-label="Close menu">✕</button>
-  <nav class="mob-nav">
-    <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services</button>
-    <div class="mob-sub" id="mobSub">
-      <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
-      <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner Tattoo</a>
-      <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoo</a>
-      <a href="/face.html" onclick="closeMenu()">Face Tattoo</a>
-      <a href="/pmu-removal.html" onclick="closeMenu()">PMU Removal</a>
-    </div>
-    <a href="/pricing.html" onclick="closeMenu()">Pricing</a>
-    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
-    <a href="/about.html" onclick="closeMenu()">About</a>
-    <a href="/faq.html" onclick="closeMenu()">FAQ</a>
-    <a href="/blog.html" onclick="closeMenu()">Blog</a>
-    <a href="/contact.html" onclick="closeMenu()">Contact</a>
-    <a href="https://m.alluremicroblading.co.nz" class="mob-book" onclick="closeMenu()" target="_blank" rel="noopener">Book Now</a>
-  </nav>
+  <a href="/index.html" onclick="closeMenu()">Home</a>
+  <button class="mob-services-toggle" id="mobServicesToggle" onclick="toggleMobServices()">Services <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+  <div class="mob-sub" id="mobSub">
+    <a href="/eyebrow.html" onclick="closeMenu()">Eyebrow Tattoo</a>
+    <a href="/eyeliner.html" onclick="closeMenu()">Eyeliner &amp; Lash Enhancement</a>
+    <a href="/lip.html" onclick="closeMenu()">Lip Blush Tattoo</a>
+    <a href="/face.html" onclick="closeMenu()">Beauty Marks &amp; Freckles</a>
+    <a href="/pmu-removal.html" onclick="closeMenu()">Non-Laser Removal</a>
+  </div>
+  <a href="/pricing.html" onclick="closeMenu()">Pricing</a>
+  <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="/about.html" onclick="closeMenu()">About</a>
+  <a href="/faq.html" onclick="closeMenu()">FAQ</a>
+  <a href="/blog.html" onclick="closeMenu()">Blog</a>
+  <a href="/contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://alluremcbd.wixsite.com/alluremicroblading/gift-card" class="nav-voucher" target="_blank" rel="noopener" onclick="closeMenu()">Gift Voucher</a>
+  <a href="/booking-agreement.html" onclick="closeMenu()">Book Online</a>
 </div>
 
 <!-- HERO: swap YOUR_IMAGE_URL_HERE with ChatGPT image URL -->
 <header class="article-hero">
   <img
-    src="YOUR_IMAGE_URL_HERE"
+    src="https://static.wixstatic.com/media/7a2894_2de2187a0d914e78acf9229b8edc4bb5~mv2.png"
     alt="Soft gradient lip blush tattoo, colour at centre with blurred border"
     loading="eager"
     onerror="this.style.display='none'"
@@ -358,7 +367,7 @@
   <div class="hero-overlay">
     <p class="hero-kicker">Lip Blush · Soft Gradient Style Guide</p>
     <h1 class="hero-title">Soft Gradient Lip Blush: Soft Centre, Blurred Border</h1>
-    <p class="hero-meta"><span class="meta-left">July 2026</span><span class="meta-right"><span>By Jessica</span><span>Allure Microblading, Auckland</span></span></p>
+    <p class="hero-meta"><span class="meta-left">June 2026</span><span class="meta-right"><span>By Jessica</span><span>Allure Microblading, Auckland</span></span></p>
   </div>
 </header>
 
@@ -393,12 +402,13 @@
     </div>
 
     <!-- IMAGE 1: paste ChatGPT image URL into src below -->
-    <figure class="article-img">
-      <div class="img-slot">
-        <div class="slot-icon">🖼</div>
-        <div class="slot-text">Replace with ChatGPT image: soft gradient lips, pink or nude, natural finish</div>
-      </div>
-      <figcaption>Colour concentrated at the centre, dissolving gently toward the edges.</figcaption>
+    <figure class="article-img compact">
+    <img
+      src="https://static.wixstatic.com/media/7a2894_d46d82b8582e40a5b8f8f034b2d5942c~mv2.jpg"
+      alt="Soft gradient lips, pink or nude, natural finish"
+      loading="lazy"
+    >
+    <figcaption>Colour concentrated at the centre, dissolving gently toward the edges.</figcaption>
     </figure>
 
     <h2>Who It Suits</h2>
@@ -453,12 +463,13 @@
     <p>The border is not left untouched. A very fine amount of pigment is placed just outside the natural lip line, then immediately worked outward with a diffusing technique that prevents any hard edge from forming. The lip appears to be its natural size or just fractionally larger, with colour that fades into skin rather than stopping against it.</p>
 
     <!-- IMAGE 2: paste ChatGPT image URL into src below -->
-    <figure class="article-img">
-      <div class="img-slot">
-        <div class="slot-icon">🖼</div>
-        <div class="slot-text">Replace with ChatGPT image: soft blurred lip border, youthful finish, warm skin</div>
-      </div>
-      <figcaption>No visible edge. The colour simply fades into the surrounding skin.</figcaption>
+    <figure class="article-img compact">
+    <img
+      src="https://static.wixstatic.com/media/7a2894_78d8283bb09b4c288c839a9c7deeaa35~mv2.png"
+      alt="soft blurred lip border, youthful finish, warm skin"
+      loading="lazy"
+    >
+    <figcaption>No visible edge. The colour simply fades into the surrounding skin.</figcaption>
     </figure>
 
     <h2>Healing</h2>
@@ -499,27 +510,23 @@
 </div>
 
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const mm        = document.getElementById('mobileMenu');
-  const mobClose  = document.getElementById('mobClose');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mm.classList.toggle('open');
-    document.body.style.overflow = mm.classList.contains('open') ? 'hidden' : '';
-    hamburger.setAttribute('aria-expanded', mm.classList.contains('open'));
-  });
-  mobClose.addEventListener('click', closeMenu);
-  document.querySelectorAll('.nav-dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', e => { if (window.innerWidth < 900) e.preventDefault(); });
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", window.scrollY > 40); });
+  const hamburger = document.getElementById("hamburger");
+  const mm = document.getElementById("mobileMenu");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mm.classList.toggle("open");
+    document.body.style.overflow = mm.classList.contains("open") ? "hidden" : "";
   });
   function toggleMobServices() {
     document.getElementById('mobServicesToggle').classList.toggle('open');
     document.getElementById('mobSub').classList.toggle('open');
   }
   function closeMenu() {
-    hamburger.classList.remove('active');
-    mm.classList.remove('open');
-    document.body.style.overflow = '';
+    hamburger.classList.remove("active");
+    mm.classList.remove("open");
+    document.body.style.overflow = "";
   }
 </script>
 

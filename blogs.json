@@ -3,14 +3,24 @@
 
   "posts": [
       {
-      "slug": "ombre-lip-blush",
-      "title": "Ombré Lip Blush: The Defined Gradient Pout",
+      "slug": "korean-lip-blush",
+      "title": "Soft Gradient Lip Blush: Soft Centre, Blurred Border",
       "Publish Date": "2026-06-01",
       "published": false,
       "tag": "Lip Techniques",
+      "excerpt": "The permanent version of cloud lips, blurred lips, and the bitten lip. A flush of colour at the centre that dissolves softly into the skin. No visible border, no liner, no daily reapplication. The lip blush style trending across Hollywood right now, with origins in Asian beauty.",
+      "image": "https://static.wixstatic.com/media/7a2894_2de2187a0d914e78acf9229b8edc4bb5~mv2.png",
+      "date": "June 2026"
+    },
+      {
+      "slug": "ombre-lip-blush",
+      "title": "Ombré Lip Blush: The Defined Gradient Pout",
+      "Publish Date": "2026-05-21",
+      "published": true,
+      "tag": "Lip Techniques",
       "excerpt": "The permanent version of overlined lips with a soft fill. A defined gradient border, a softer centre, and the structure of a perfectly drawn lip pencil without redrawing it every morning. From muted Pillow Talk nudes to healthy bright tones, with matte or glossy finish.",
       "image": "https://static.wixstatic.com/media/7a2894_f7273b3136b243608ee6bb798dd315d6~mv2.png",
-      "date": "June 2026"
+      "date": "May 2026"
     },
     {
       "slug": "microblading-vs-ombre-powder-brows",
